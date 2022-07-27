@@ -12,8 +12,8 @@ const ActivityListCard = () => {
             <div className="head-content">
                 <h1> Activity List</h1>
                 <div className="head-btn">
-                    <a href="#"><img src= { clickPrev } alt="" /></a>
-                    <a href="#"><img src= { clickNext } alt="" /></a>
+                    <a className="btn-left" href="#"><img src= { clickPrev } alt="" /></a>
+                    <a className="btn-right" href="#"><img src= { clickNext } alt="" /></a>
                 </div>
             </div>
 

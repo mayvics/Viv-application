@@ -10,17 +10,24 @@
     width: 715px;
     height: 862px;
     padding: 0 24px;
-    
+    border-radius: 25px;
 }
 
-.container-activity .head-content{
+.head-content{
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container-activity .head-content img{
+.head-content h1 {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    font-size: 40px;
+}
+
+.head-content img{
     width: 43px;
     height: 46px;
     background-color: #F1F1F1;
@@ -31,12 +38,12 @@
 
 }
 
-.container-activity .container-listcard {
+.container-listcard {
     margin-top: 40px;
 }
 
 
-.container-activity .listCard{
+.listCard{
     background-color: #F1F1F1;
     width: 643px;
     height: 145px;
@@ -46,18 +53,18 @@
 
 }
 
-.container-activity .listCard .card{
+.card{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container-activity .listCard .card .container-content{
+.container-content{
     display: flex;
     line-height: 1.5em;
 }
 
-.container-activity .listCard .card .container-content img{
+.container-content img{
     width: 56px;
     height: 62px;
     background-color: #73E184;
@@ -66,21 +73,40 @@
     margin: 40px 30px;
 }
 
-.container-activity .listCard .card .container-content div{
+.container-content div{
    margin: 25px 0;
 }
 
 
-.container-activity .listCard .card .card-btn{
+.card-btn{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.container-activity .listCard .card .card-btn img{
+.card-btn img{
     margin: 22px 15px;
     width: 25px;
     height: 27px;
+}
+
+.btn-left {
+    position: absolute;
+    left:555px;
+    top:27px;
+    right:106px;
+}
+.btn-right {
+    position: absolute;
+    left:610px;
+    top:27px;
+    right:36px;
+}
+
+.container-listcard {
+    position: absolute;
+    top:40px;
+    left:35px;
 }
 
 
