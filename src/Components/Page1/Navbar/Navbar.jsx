@@ -10,15 +10,15 @@ class Navbar extends Component {
         return (
             <div className="Navbar">
                 <div className="logo">
-                    <img src="logo.svg" alt="logo icon" />
+                    <img id="logoIcon" src="logo.svg" alt="logo icon" />
                 //link Page1
                     <h2>Viv Application</h2>
                 </div>
     
                 <div className="schedule"> 
-                    <img src="schedule.svg" alt="schedule icon" />
+                    <img id="scheduleIcon" src="schedule.svg" alt="schedule icon" />
                 //link schedule page
-                    <h2>Schedule</h2>
+                    <h3>Schedule</h3>
                 </div>
             </div>
         );
