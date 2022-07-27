@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-activity{
+    background-color: #FD9D9D;
+    width: 715px;
+    height: 862px;
+    padding: 0 24px;
+    
+}
+
+.container-activity .head-content{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-activity .head-content img{
+    width: 43px;
+    height: 46px;
+    background-color: #F1F1F1;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
+
+}
+
+.container-activity .container-listcard {
+    margin-top: 40px;
+}
+
+
+.container-activity .listCard{
+    background-color: #F1F1F1;
+    width: 643px;
+    height: 145px;
+    border-radius: 25px;
+    margin-top: 25px;
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
+
+}
+
+.container-activity .listCard .card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-activity .listCard .card .container-content{
+    display: flex;
+    line-height: 1.5em;
+}
+
+.container-activity .listCard .card .container-content img{
+    width: 56px;
+    height: 62px;
+    background-color: #73E184;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 40px 30px;
+}
+
+.container-activity .listCard .card .container-content div{
+   margin: 25px 0;
+}
+
+
+.container-activity .listCard .card .card-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-activity .listCard .card .card-btn img{
+    margin: 22px 15px;
+    width: 25px;
+    height: 27px;
+}
+
+
+
+
+
+
+
