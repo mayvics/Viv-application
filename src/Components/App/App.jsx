@@ -1,10 +1,12 @@
-import ActivityListCard from '../ActivityListCard/ActivityListCard'
 import './App.css'
+import ActivityList from '../Page1/Activity-list/ActivityList'
 
 function App() {
   return (
-    <ActivityListCard/>
+    <div className='App'>
+
+    </div>
   )
 }
 
-export default App
+export default App;
