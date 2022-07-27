@@ -1,5 +1,5 @@
 import "./Sidebar.css";
-import './Profile'
+import Profile from './Profile'
 
  const Sidebar = () => {
   return (
