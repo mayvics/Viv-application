@@ -3,13 +3,12 @@
 }
 
 .sidebar {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 535px;
     height: 860px;
-    left: 55px;
-    top: 117px;
-
     background: #FD9D9D;
     border-radius: 25px;
+    margin: 120px 20px 0px 100px;
 }
 

@@ -4,9 +4,8 @@
 
 .Summary {
     display: flex;
-    position: absolute;
-    top: 760px;
-    left: 60px;
+    margin: 15px auto;
+    filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
 }
 
 .Summary button{
@@ -17,6 +16,7 @@
     height: 88px;
 border-radius: 25px;
 color: #f1f1f1;
+
 }
 
 .Summary img {
