@@ -7,7 +7,9 @@
     width: 444px;
     height: 119px;
     align-items: center;
-    margin: 25px;
+    position: absolute;
+    top: 40px;
+    left: 60px;
 }
 
 .profile img {

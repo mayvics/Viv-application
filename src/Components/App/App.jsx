@@ -1,10 +1,10 @@
 import './App.css'
-import ActivityList from '../Page1/Activity-list/ActivityList'
+import Page1 from '../Page1/Page1'
 
 function App() {
   return (
     <div className='App'>
-
+        <Page1 />
     </div>
   )
 }
