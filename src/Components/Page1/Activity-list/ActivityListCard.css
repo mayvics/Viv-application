@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-activity{
+    background-color: #FD9D9D;
+    width: 715px;
+    height: 862px;
+    padding: 0 24px;
+    border-radius: 25px;
+}
+
+.head-content{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-content h1 {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    font-size: 40px;
+}
+
+.head-content img{
+    width: 43px;
+    height: 46px;
+    background-color: #F1F1F1;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
+
+}
+
+.container-listcard {
+    margin-top: 40px;
+}
+
+
+.listCard{
+    background-color: #F1F1F1;
+    width: 643px;
+    height: 145px;
+    border-radius: 25px;
+    margin-top: 25px;
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
+
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-content{
+    display: flex;
+    line-height: 1.5em;
+}
+
+.container-content img{
+    width: 56px;
+    height: 62px;
+    background-color: #73E184;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 40px 30px;
+}
+
+.container-content div{
+   margin: 25px 0;
+}
+
+
+.card-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-btn img{
+    margin: 22px 15px;
+    width: 25px;
+    height: 27px;
+}
+
+.btn-left {
+    position: absolute;
+    left:555px;
+    top:27px;
+    right:106px;
+}
+.btn-right {
+    position: absolute;
+    left:610px;
+    top:27px;
+    right:36px;
+}
+
+.container-listcard {
+    position: absolute;
+    top:40px;
+    left:35px;
+}
+
+
+
+
+
+
+

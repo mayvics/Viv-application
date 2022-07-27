@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+}
+
+.sidebar {
+    position: absolute;
+    width: 535px;
+    height: 860px;
+    left: 55px;
+    top: 117px;
+
+    background: #FD9D9D;
+    border-radius: 25px;
+}
+
