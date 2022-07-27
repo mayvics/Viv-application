@@ -1,6 +1,6 @@
 import './App.css'
 import Sidebar from '../Page1/Sidebar/Sidebar'
-// import Profile from '../Page1/Sidebar/Profile';
+
 
 function App() {
   return (
