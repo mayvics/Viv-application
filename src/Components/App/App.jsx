@@ -1,16 +1,10 @@
-import { useState } from 'react'
-import reactLogo from '../../assets/react.svg'
 import './App.css'
-import ActivityList from '../Page1/Activity-list/ActivityList'
-import Weeklystat from '../Page1/Sidebar/Weeklystat'
-import Tips from '../Page1/Sidebar/Tips'
+import Page1 from '../Page1/Page1'
 
 function App() {
   return (
     <div className='App'>
-        {/* <ActivityList /> */}
-        {/* <Weeklystat /> */}
-        {/* <Tips /> */}
+        <Page1 />
     </div>
   )
 }
