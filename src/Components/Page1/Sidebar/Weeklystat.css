@@ -9,9 +9,9 @@
     filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
     background: #F1F1F1;
     border-radius: 25px;
-    position: absolute;
-    top: 190px;
-    left: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
 }
 
 .text-container {
@@ -36,7 +36,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
 }
 
 .graph-container img {
@@ -47,4 +46,3 @@
 .result-container p {
     line-height: 35px;
 }
-

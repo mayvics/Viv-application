@@ -4,16 +4,12 @@
 
 .act-container {
     display: flex;
-    position: absolute;
-    left: 641px;
-    top: 117px;
     flex-direction: column;
-    justify-content: space-between;
     width: 715px;
     height: 860px;
     border-radius: 25px;
-    padding: 105px, 36px, 105px, 36px;
     background: #FD9D9D;
+    margin: 120px 100px 0px 20px;
 }
 
 .act-container h3 {
@@ -23,33 +19,27 @@
     padding: 40px 0 0 35px;
 }
 
-.btn-container {
-    padding: 30px 35px 0 0;
+.head-content{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px ;
 }
 
-.btn-add {
-    position: absolute;
-    bottom: 15px;
-    left: 240px;
-    border: transparent;
-    background: #b9f2ff;
-    width: 255px;
-    height: 60px;
+.head-content h1 {
+    font-size: 40px;
+}
+
+.head-content img{
+    width: 43px;
+    height: 46px;
+    background-color: #F1F1F1;
+    margin: 0 10px;
+    padding: 10px;
     border-radius: 25px;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.15));
-    transition-duration: 0.4s;
-}
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
 
-.btn-add:hover {
-    background-color: #b5e696;
-  }
-
-.btn-add p {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    text-align: center;
-    color: black;
 }
 
 

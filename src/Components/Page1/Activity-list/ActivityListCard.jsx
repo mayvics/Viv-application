@@ -1,7 +1,5 @@
 import React from "react";
 import './ActivityListCard.css';
-import clickNext from './images/next.png';
-import clickPrev from './images/prev.png';
 import logoRun from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
@@ -9,18 +7,8 @@ import remove from './images/remove.png';
 const ActivityListCard = () => {
     return(
         <div className="container-activity">
-            <div className="head-content">
-                <h1> Activity List</h1>
-                <div className="head-btn">
-                    <a className="btn-left" href="#"><img src= { clickPrev } alt="" /></a>
-                    <a className="btn-right" href="#"><img src= { clickNext } alt="" /></a>
-                </div>
-            </div>
-
             <div className="container-listcard">
-
                     {/*        card 1          */}
-
                 <div className="listCard">
                     <div className="card">
                         <div className="container-content">
