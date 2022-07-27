@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+}
+
+.sidebar {
+    background-color: #FD9D9D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 715px;
+    height: 860px;
+}

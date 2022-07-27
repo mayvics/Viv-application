@@ -1,9 +1,13 @@
 import "./Profile.css"
+import userLogo from './images/blank-profile-circle.png'
 
 const Profile = () => {
     return (
-        <div className="container">
-            <img src="./images/blank-profile-circle.png"></img>
+        <div className="profile">
+            <img src={userLogo}></img>
+            <h1>User01</h1>
         </div>
     )
 }
+
+export default Profile;
