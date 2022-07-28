@@ -1,13 +1,14 @@
 .Dropdown-container {
     background-color:#F1F1F1;
     font-family: 'Inter', sans-serif;
+    text-align: center;
+
 }
 
 .Dropdown-container button {
     position: absolute;
     width: 330px;
     height: 90px;
-    text-align: center;
     top: 122px;
     border: none;
     text-align: center;
