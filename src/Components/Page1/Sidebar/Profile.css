@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+}
+
+.profile {
+    display: flex;
+    width: 444px;
+    height: 119px;
+    align-items: center;
+    margin: 20px auto 15px;
+}
+
+.profile img {
+    width:131px;
+    height: 119px;
+}
+
+.profile h1 {
+   margin-left: 60px;
+}
