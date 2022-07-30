@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
-import DatePicker from "react-multi-date-picker";
+import { useForm } from "react-hook-form";
 import Navbar from "../Page1/Navbar/Navbar";
-import "./EditActivity.css";
+import "./EditAct.css"
 
 const EditAct = () => {
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
@@ -16,9 +14,9 @@ const EditAct = () => {
   return (
 <div>
     <Navbar />
-    <div className="bigBox">
-      <form id="form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="type">
+    <div className="bigBox2">
+      <form id="form2" onSubmit={handleSubmit(onSubmit)}>
+        <div className="type2">
           <h2>Type activity : </h2>
           <select {...register("category", { required: true })}>
             <option value="">---- Select your activity ----</option>
@@ -31,9 +29,9 @@ const EditAct = () => {
           {errors.category && <p>Type is required</p>}
         </div>
 
-        <div className="type">
+        <div className="type2">
           <h2>Duration : </h2>
-          <div className="boxDu">
+          <div className="boxDu2">
             <input type="number" {...register("hour", { required: true })} />
             {errors.hour && <p>Hour is required</p>}
             <h2>Hours</h2>
@@ -43,29 +41,18 @@ const EditAct = () => {
           </div>
         </div>
 
-        <div className="calendar">
+        <div className="calendar2">
           <h2>Date : </h2>
-          <Controller
-            control={control}
-            name="dateInput"
-            rules={{ required: true }}
-            render={({ field }) => (
-              <DatePicker
-                placeholderText="Select date"
-                onChange={(date) => field.onChange(date)}
-                selected={field.value}
-              />
-            )}
-          />
-          {errors.dateInput && <p>Date is required</p>}
+          <input type="date" {...register("date", { required: true})} />
+            {errors.date && <p>Date is required</p>}
         </div>
 
-        <div className="type2">
+        <div className="type3">
           <h2>Description </h2>
           <textarea {...register("aboutYou")} placeholder="Description" />
         </div>
 
-        <div className="btn">
+        <div className="btn2">
         <input type="submit" value="Edit" />
         <input type="submit" value="Cancel" />
         </div>

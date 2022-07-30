@@ -1,5 +1,4 @@
-
-.bigBox {
+.bigBox2 {
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -7,10 +6,10 @@
 
 p {
     font-size: 17px;
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
-#form {
+#form2 {
     display: flex;
     flex-direction: column;
     width: 730px;
@@ -20,7 +19,7 @@ p {
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
 
-.type {
+.type2 {
     display: flex;
     flex-direction: column;
     height: 120px;
@@ -41,7 +40,7 @@ h2 {
     margin-left: 10px;
 }
 
-.type select {
+.type2 select {
     border-radius: 20px;
     width: 430px;
     height: 50px;
@@ -49,7 +48,7 @@ h2 {
 }
 
 
-.type input {
+.type2 input {
     width: 90px;
     height: 50px;
     font-size: 25px;
@@ -58,12 +57,12 @@ h2 {
     text-align: center;
 }
 
-.boxDu {
+.boxDu2 {
     display: flex;
     flex-direction: row;
 }
 
-.calendar {
+.calendar2 {
     display: flex;
     flex-direction: column;
     height: 120px;
@@ -76,7 +75,7 @@ h2 {
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
 
-.calendar h2 {
+.calendar2 h2 {
     display: flex;
     align-items: center;
     font-size: 40px;
@@ -84,14 +83,14 @@ h2 {
     margin-left: 10px;
 }
 
-.calendar input {
+.calendar2 input {
     border-radius: 20px;
-    width: 150px;
+    width: 200px;
     height: 50px;
     font-size: 25px;
 }
 
-.type2 {
+.type3 {
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -104,19 +103,19 @@ h2 {
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
 
-.type2 textarea {
+.type3 textarea {
     width: 600px;
     height:100px;
 }
 
-.btn {
+.btn2 {
     display: flex;
     flex-direction: row;
     margin: 20px 70px ;
     justify-content: space-between;
 }
 
-.btn input {
+.btn2 input {
     width: 100px;
     height:50px;
     border-radius: 20px;

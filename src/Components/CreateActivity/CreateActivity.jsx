@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
-import DatePicker from "react-multi-date-picker";
+import { useForm } from "react-hook-form";
 import Navbar from "../Page1/Navbar/Navbar";
 import "./CreateActivity.css";
 
@@ -8,7 +7,6 @@ const CreateAct = () => {
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
@@ -34,33 +32,22 @@ const CreateAct = () => {
         <div className="type">
           <h2>Duration : </h2>
           <div className="boxDu">
-            <input type="number" {...register("hour", { required: true })} />
+            <input type="number" min="0" max="24"{...register("hour", { required: true})} />
             {errors.hour && <p>Hour is required</p>}
             <h2>Hours</h2>
-            <input type="number" {...register("minute", { required: true })} />
+            <input type="number" min="0" max="59"{...register("minute", { required: true })} />
             {errors.minute && <p>Minutes is required</p>}
             <h2>Minutes</h2>
           </div>
         </div>
 
-        <div className="calendar">
+        <div className="cal">
           <h2>Date : </h2>
-          <Controller
-            control={control}
-            name="dateInput"
-            rules={{ required: true }}
-            render={({ field }) => (
-              <DatePicker
-                placeholderText="Select date"
-                onChange={(date) => field.onChange(date)}
-                selected={field.value}
-              />
-            )}
-          />
-          {errors.dateInput && <p>Date is required</p>}
+          <input type="date" {...register("date", { required: true})} />
+            {errors.date && <p>Date is required</p>}
         </div>
 
-        <div className="type2">
+        <div className="typeD">
           <h2>Description </h2>
           <textarea {...register("aboutYou")} placeholder="Description" />
         </div>
