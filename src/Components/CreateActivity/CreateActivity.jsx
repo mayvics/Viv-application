@@ -21,10 +21,12 @@ const CreateAct = () => {
         <div className="type">
           <h2>Type activity : </h2>
           <select {...register("category", { required: true })}>
-            <option value="">Select...</option>
-            <option value="A">Running </option>
-            <option value="B">Swimming</option>
-            <option value="C">Hiking</option>
+            <option value="">---- Select your activity ----</option>
+            <option value="A">Running 🏃</option>
+            <option value="B">Swimming 🏊🏻‍♂️</option>
+            <option value="C">Hiking 🌲👨🏻‍🦯</option>
+            <option value="D">Riding bicycle 🚴🏻‍♂️</option>
+            <option value="E">Walking 🚶</option>
           </select>
           {errors.category && <p>Type is required</p>}
         </div>

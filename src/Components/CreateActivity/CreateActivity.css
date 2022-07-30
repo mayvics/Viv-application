@@ -5,6 +5,11 @@
     margin-top: 50px;
 }
 
+p {
+    font-size: 17px;
+    color: red;
+}
+
 #form {
     display: flex;
     flex-direction: column;
@@ -22,7 +27,7 @@
     width: 670px;
     justify-content: center;
     align-items: center;
-    background-color:#FD9D9D;
+    background-color:#ffbcbc;
     margin: 20px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
@@ -53,6 +58,10 @@ h2 {
     text-align: center;
 }
 
+.type option {
+    text-align: center;
+}
+
 .boxDu {
     display: flex;
     flex-direction: row;
@@ -65,7 +74,7 @@ h2 {
     width: 670px;
     justify-content: center;
     align-items: center;
-    background-color:#FD9D9D;
+    background-color:#ffbcbc;
     margin: 20px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
@@ -93,7 +102,7 @@ h2 {
     width: 670px;
     justify-content: center;
     align-items: center;
-    background-color:#FD9D9D;
+    background-color:#ffbcbc;
     margin: 20px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
