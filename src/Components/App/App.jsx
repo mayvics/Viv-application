@@ -6,7 +6,7 @@ import EditAct from '../EditActivity/EditActivity';
 function App() {
   return (
     <div className='App'>
-        <EditAct />
+        <Page1 />
     </div>
   )
 }
