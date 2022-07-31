@@ -18,26 +18,26 @@ const EditAct = () => {
       <form id="form2" onSubmit={handleSubmit(onSubmit)}>
         <div className="type2">
           <h2>Type activity : </h2>
-          <select {...register("category", { required: true })}>
+          <select {...register("ActType", { required: true })}>
             <option value="">---- Select your activity ----</option>
-            <option value="A">Running  🏃</option>
-            <option value="B">Swimming  🏊🏻‍♂️</option>
-            <option value="C">Hiking  🌲👨🏻‍🦯</option>
-            <option value="D">Riding bicycle  🚴🏻‍♂️</option>
-            <option value="E">Walking  🚶</option>
+            <option value="Running 🏃">Running  🏃</option>
+            <option value="Swimming 🏊🏻‍♂️">Swimming  🏊🏻‍♂️</option>
+            <option value="Hiking 🌲👨🏻‍🦯">Hiking  🌲👨🏻‍🦯</option>
+            <option value="Riding bicycle 🚴🏻‍♂️">Riding bicycle  🚴🏻‍♂️</option>
+            <option value="Walking 🚶">Walking  🚶</option>
           </select>
-          {errors.category && <p>Type is required</p>}
+          {errors.ActType && <p>Type is required</p>}
         </div>
 
         <div className="type2">
           <h2>Duration : </h2>
           <div className="boxDu2">
-            <input type="number" {...register("hour", { required: true })} />
+            <input type="number" min="0" max="24"{...register("hour", { required: true })} />
             {errors.hour && <p>Hour is required</p>}
-            <h2>Hours</h2>
-            <input type="number" {...register("minute", { required: true })} />
+            <h3>Hours</h3>
+            <input type="number" min="0" max="59"{...register("minute", { required: true })} />
             {errors.minute && <p>Minutes is required</p>}
-            <h2>Minutes</h2>
+            <h3>Minutes</h3>
           </div>
         </div>
 
@@ -48,8 +48,8 @@ const EditAct = () => {
         </div>
 
         <div className="type3">
-          <h2>Description </h2>
-          <textarea {...register("aboutYou")} placeholder="Description" />
+          <h2>Description</h2>
+          <textarea {...register("Description")}  />
         </div>
 
         <div className="btn2">

@@ -6,7 +6,7 @@ import CreateAct from '../CreateActivity/CreateActivity';
 function App() {
   return (
     <div className='App'>
-        <EditAct />
+        <CreateAct />
     </div>
   )
 }
