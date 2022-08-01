@@ -1,0 +1,60 @@
+.Navbar-container {
+    background: #FFE7E7;
+    height: 85px;
+    width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+#logoIcon {
+    width: 58px;
+    height: 58px;
+    margin: 0 20px;
+}
+
+#text-viv {
+    margin-left: 5px;
+    width: 236px;
+    height: 52px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+}
+
+.schedule {
+    display: flex;
+    width: 210px;
+    height: 57px;
+
+}
+
+#scheduleIcon {
+margin: 0 10px;
+}
+
+#text-schedule {
+
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
