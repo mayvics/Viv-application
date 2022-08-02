@@ -2,13 +2,14 @@
     background: #FFE7E7;
     height: 85px;
     width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     display: flex;
+    align-items: center;
 }
 
 #logoIcon {
@@ -18,7 +19,6 @@ align-items: center;
 }
 
 #text-viv {
-    margin-left: 5px;
     width: 236px;
     height: 52px;
     font-family: 'Inter';
@@ -28,33 +28,30 @@ align-items: center;
     display: flex;
     align-items: center;
     text-align: center;
-    
     color: #000000;
-    
+    margin: 0px;
 }
 
 .schedule {
     display: flex;
     width: 210px;
     height: 57px;
-
+    margin: 0px;
 }
 
 #scheduleIcon {
-margin: 0 10px;
+margin: 0 15px;
 }
 
 #text-schedule {
-
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
+    margin: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
