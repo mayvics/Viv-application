@@ -4,13 +4,15 @@ import EditAct from '../EditActivity/EditActivity';
 import CreateAct from '../CreateActivity/CreateActivity';
 import SummaryItem from '../summaryItem_week/summaryItem'
 import MyCalendar from '../Calendar/Calendar';
+import DisplayPie from '../Piechart/Piechart'
 
 function App() {
   return (
-
     <div className='App'>
         <Page1 />
         <MyCalendar />
+        <DisplayPie />
+
     </div>
   )
 }
