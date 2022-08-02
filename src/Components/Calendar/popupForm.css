@@ -22,7 +22,7 @@
     font-size: 18px;
     font-weight: 600;
     border: transparent;
-    filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
+    cursor: pointer;
   }
 
   .addEvent-btn:hover {
@@ -130,6 +130,7 @@
     border: transparent;
     color:white;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .confirm-btn:hover {
