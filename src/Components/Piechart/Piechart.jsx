@@ -2,10 +2,10 @@ import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
 const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 }
+  { name: "Running", value: 400 },
+  { name: "Weight Lifting", value: 300 },
+  { name: "Biking", value: 300 },
+  { name: "Swimming", value: 200 }
 ];
 
 const renderActiveShape = (props) => {
@@ -35,7 +35,7 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill="#36a2eb">
         {payload.name}
       </text>
       <Sector
@@ -45,7 +45,7 @@ const renderActiveShape = (props) => {
         outerRadius={outerRadius}
         startAngle={startAngle}
         endAngle={endAngle}
-        fill={fill}
+        fill="#ff6384"
       />
       <Sector
         cx={cx}
@@ -89,6 +89,8 @@ export default function App() {
     },
     [setActiveIndex]
   );
+
+
 
   return (
     <PieChart width={400} height={400}>
