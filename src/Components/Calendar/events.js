@@ -5,28 +5,21 @@ export default [
     id: 0,
     title: 'All Day Event very long title',
     allDay: true,
-    start: new Date(2022, 8, 5),
-    end: new Date(2022, 8, 6),
+    start: new Date(2022, 7, 5),
+    end: new Date(2022, 7, 6),
   },
   {
     id: 1,
     title: 'Long Event',
-    start: new Date(2022, 8, 7, 0, 0, 0),
-    end: new Date(2022, 8, 10, 0, 0, 0),
+    start: new Date(2022, 7, 7, 0, 0, 0),
+    end: new Date(2022, 7, 10, 0, 0, 0),
   },
 
   {
     id: 2,
     title: 'DTS STARTS',
-    start: new Date(2016, 2, 13, 0, 0, 0),
-    end: new Date(2016, 2, 20, 0, 0, 0),
-  },
-
-  {
-    id: 3,
-    title: 'DTS ENDS',
-    start: new Date(2016, 10, 6, 0, 0, 0),
-    end: new Date(2016, 10, 13, 0, 0, 0),
+    start: new Date(2022, 7, 13, 0, 0, 0),
+    end: new Date(2022, 7, 20, 0, 0, 0),
   },
   {
     id: 14,
