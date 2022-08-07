@@ -11,6 +11,10 @@ align-items: center;
     display: flex;
 }
 
+a {
+    text-decoration: none;
+}
+
 #logoIcon {
     width: 58px;
     height: 58px;

@@ -4,6 +4,7 @@ import summaryLogo from './images/png-transparent-chart-computer-icons-statistic
 const Summary = () => {
     return(
         <div className='Summary'>
+            
            <button>
             <img src={summaryLogo}></img>
             <strong>Summary</strong>

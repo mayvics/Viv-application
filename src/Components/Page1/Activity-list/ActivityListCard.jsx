@@ -3,6 +3,7 @@ import './ActivityListCard.css';
 import logoRun from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
+import { Link } from "react-router-dom";
 
 const ActivityListCard = () => {
     return(
@@ -21,7 +22,7 @@ const ActivityListCard = () => {
                             </div>
                         </div>
                         <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
+                            <Link to="/edit"><img src= { edit } alt="" /></Link>
                             <a href="#"><img src= { remove } alt="" /></a>
                         </div>
                     </div>

@@ -6,7 +6,6 @@ import Navbar from "./Navbar/Navbar";
 const Page1 = () => {
   return (
     <div className="Page1">
-        <Navbar />
       <div className="body">
         <Sidebar />
         <ActivityList />
