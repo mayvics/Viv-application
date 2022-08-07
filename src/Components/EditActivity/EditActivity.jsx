@@ -13,7 +13,6 @@ const EditAct = () => {
 
   return (
 <div>
-    <Navbar />
     <div className="bigBox2">
       <form id="form2" onSubmit={handleSubmit(onSubmit)}>
         <div className="type2">

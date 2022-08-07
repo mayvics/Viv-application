@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import Navbar from "../Page1/Navbar/Navbar";
 import "./CreateActivity.css";
 
@@ -13,7 +14,7 @@ const CreateAct = () => {
 
   return (
 <div>
-    <Navbar />
+
     <div className="bigBox">
       <form id="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="type">
@@ -53,8 +54,12 @@ const CreateAct = () => {
         </div>
 
         <div className="btn">
+          <Link to="/">
         <input type="submit" value="Add" />
+        </Link>
+        <Link to="/">
         <input type="submit" value="Cancel" />
+        </Link>
         </div>
       </form>
     </div>
