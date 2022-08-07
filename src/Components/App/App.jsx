@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Page1 from "../Page1/Page1";
 import EditAct from "../EditActivity/EditActivity";
@@ -18,6 +19,7 @@ function App() {
         </div>
     
   );
+
 }
 
 export default App;
