@@ -1,10 +1,10 @@
 import './App.css'
-import ActivityList from '../Page1/Activity-list/ActivityList'
+import ActivityListCard from '../ActivityListCard/ActivityListCard';
 
 function App() {
   return (
     <div className='App'>
-
+      <ActivityListCard/>
     </div>
   )
 }
