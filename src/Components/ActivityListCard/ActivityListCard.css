@@ -14,25 +14,14 @@
 }
 
 .container-activity .head-content{
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 30px;
+	box-shadow: 0 35px 20px -20px rgb(0 0 0 / 0.1);
 }
 
-.container-activity .head-content img{
-    width: 43px;
-    height: 46px;
-    background-color: #F1F1F1;
-    margin: 0 10px;
-    padding: 10px;
-    border-radius: 25px;
-    box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
-
-}
 
 .container-activity .container-listcard {
-    margin-top: 40px;
+    height: 700px;
+    overflow: scroll;
 }
 
 
@@ -43,7 +32,6 @@
     border-radius: 25px;
     margin-top: 25px;
     box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
-
 }
 
 .container-activity .listCard .card{
