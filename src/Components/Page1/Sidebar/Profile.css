@@ -7,12 +7,13 @@
     width: 444px;
     height: 119px;
     align-items: center;
-    margin: 25px;
+    margin: 20px auto 15px;
 }
 
 .profile img {
     width:131px;
     height: 119px;
+    margin-left: 10px;
 }
 
 .profile h1 {

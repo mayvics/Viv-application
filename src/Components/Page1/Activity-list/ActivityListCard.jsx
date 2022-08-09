@@ -3,7 +3,6 @@ import './ActivityListCard.css';
 import barbel from './images/barbel.png'
 import swim from './images/swim.png'
 import bicycle from './images/bicycle.png'
-
 import logoRun from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
@@ -14,11 +13,8 @@ const ActivityListCard = () => {
             <div className="head-content">
                 <h1> Activity List</h1>
             </div>
-
             <div className="container-listcard">
-
                     {/*        card 1          */}
-
                 <div className="listCard">
                     <div className="card">
                         <div className="container-content">

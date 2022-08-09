@@ -1,73 +1,57 @@
-* {
-    position: absolute;
-    width: 1440px;
-    height: 85px;
-    left: 0px;
-    top: 0px;
+.Navbar-container {
     background: #FFE7E7;
+    height: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
 
 #logoIcon {
-    position: absolute;
     width: 58px;
     height: 58px;
-    left: 21px;
-    top: 13px;
-
+    margin: 0 20px;
 }
 
-h2 {
-    position: absolute;
-    width: 410px;
+#text-viv {
+    width: 236px;
     height: 52px;
-    left: 0px;
-    top: 19px;
-
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     text-align: center;
-    
     color: #000000;
-
+    margin: 0px;
 }
 
 .schedule {
-    position: absolute;
+    display: flex;
     width: 210px;
     height: 57px;
-    left: 1213px;
-    top: 13px;
+    margin: 0px;
 }
 
 #scheduleIcon {
-    position: absolute;
-    left: 0%;
-    right: 72.86%;
-    top: 0%;
-    bottom: 0%;
+margin: 0 15px;
 }
 
-h3 {
-    position: absolute;
-left: 11.9%;
-right: 0%;
-top: 8.77%;
-bottom: 0%;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
+#text-schedule {
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
