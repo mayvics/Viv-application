@@ -11,9 +11,6 @@ import { Link } from "react-router-dom";
 const ActivityListCard = () => {
     return(
         <div className="container-activity">
-            <div className="head-content">
-                <h1> Activity List</h1>
-            </div>
             <div className="container-listcard">
                     {/*        card 1          */}
                 <div className="listCard">
