@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Page1 />} />
         <Route path="/create" element={<CreateAct />} />
-        <Route path="/edit" element={<EditAct />} />
+        <Route path="/edit/:id" element={<EditAct />} />
         <Route path="/schedule" element={<Calendar />} />
       </Routes>
     </div>

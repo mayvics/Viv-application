@@ -5,7 +5,7 @@
 }
 
 .container-activity{
-    width: 100%;
+    width: fit-content;
     height: auto;
     padding: 0 40px;
 }
@@ -65,6 +65,7 @@
     width: 25px;
     height: 25px;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .card-btn img:hover{
