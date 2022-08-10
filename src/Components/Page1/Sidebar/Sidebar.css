@@ -1,14 +1,10 @@
-* {
-    margin: 0px;
-}
-
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 535px;
-    height: 860px;
-    background: #FD9D9D;
+    width: 500px;
+    height: 900px;
+    background: #fd9d9dcc;
     border-radius: 25px;
-    margin: 70px 20px 0px 100px;
+    margin: 70px 20px 70px 100px;
 }
 

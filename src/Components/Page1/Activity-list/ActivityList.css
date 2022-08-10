@@ -5,15 +5,16 @@
 .act-container {
     display: flex;
     flex-direction: column;
-    width: 715px;
+    width: 700px;
     height: fit-content;
+    background: #fd9d9dcc;
     border-radius: 25px;
-    background: #FD9D9D;
-    padding-bottom: 20px;
     margin: 70px 100px 0px 20px;
 }
 
 .act-container h3 {
+    font-family: 'Varela Round', sans-serif;
+    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     color: black;
@@ -25,11 +26,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 30px ;
+    margin: 20px 40px 0;
 }
 
 .head-content h1 {
-    font-size: 40px;
+    font-size: 24px;
+    font-family: 'Varela Round', sans-serif;
+    font-style: normal;
+    color:  #572e2ec0;
 }
 
 .head-content img{
@@ -44,4 +48,14 @@
 }
 
 
-
+@media only screen and (max-width: 1500px) {
+    .act-container {
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+        height: 900px;
+        background: #fd9d9dcc;
+        border-radius: 25px;
+        margin: 70px 0;
+    }
+}
