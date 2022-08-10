@@ -4,14 +4,15 @@ import Navbar from "../Page1/Navbar/Navbar";
 import "./EditAct.css"
 
 const EditAct = () => {
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     console.log(data)
-    
   };
 
 
