@@ -7,7 +7,7 @@
 .container-activity{
     background-color: #FD9D9D;
     width: 715px;
-    height: 690px;
+    height: fit-content;
     padding: 0px 24px;
     border-radius: 25px;
 }
@@ -15,7 +15,7 @@
 .listCard{
     background-color: #F1F1F1;
     width: 643px;
-    height: 145px;
+    height: fit-content;
     border-radius: 25px;
     margin: 20px auto;
     box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
@@ -36,7 +36,7 @@
     width: 56px;
     height: 62px;
     background-color: #73E184;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     margin: 40px 30px;
 }
