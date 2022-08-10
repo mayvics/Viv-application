@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import Navbar from "../Page1/Navbar/Navbar";
 import "./CreateActivity.css";
 import axios from "axios";
 import Swal from 'sweetalert2';
@@ -20,6 +18,7 @@ const CreateAct = () => {
     .post(`http://localhost:8080/activities/create`, data, { headers: { 'Content-Type': 'application/json' }})
     .then((res) => {
       console.log(res.data)
+      //popup to show it been save
       Swal.fire(
           'Good job!',
           'Your data had been saved.',
@@ -28,6 +27,7 @@ const CreateAct = () => {
     .then(()=> document.addEventListener("click", window.location = "/"))
     })
     .catch((err) => {
+        //popup to show if error
         Swal.fire(
             'Sorry for a problem!',
             err.response.data.error,
@@ -74,7 +74,7 @@ const CreateAct = () => {
 
         <div className="typeD">
           <h2>Description </h2>
-          <textarea {...register("aboutYou")} placeholder="Description" />
+          <textarea {...register("description")} placeholder="Description" />
         </div>
 
         <div className="btn">

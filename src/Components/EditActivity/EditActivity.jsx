@@ -1,21 +1,87 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import Navbar from "../Page1/Navbar/Navbar";
 import "./EditAct.css"
+import { useParams } from "react-router-dom";
+import axios from 'axios'
+import Swal from "sweetalert2";
 
 const EditAct = () => {
+
+  const [state, setState] = useState([]);
+
+  //For format date to yyyy-mm-dd
+  function padTo2Digits(num) {
+    return num.toString().padStart(2, '0');
+  }
+
+  function formatDate(date) {
+    return (
+      [
+        date.getFullYear(),
+        padTo2Digits(date.getMonth() + 1),
+        padTo2Digits(date.getDate()),
+      ].join('-')
+  )}
+
+  const newDate = formatDate(new Date(state.date));
   
+  //react-hook-form
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
+  //Receive id which pass from router
+  const { id } = useParams();
+
+  //Get each data from id
+  useEffect(()=>{
+    axios.get(`http://localhost:8080/activities/${id}`)
+    .then((res) => {
+      const {ActType,hour,minute,date,description } = res.data
+      setState({...state,ActType,hour,minute,date,description })
+    })
+  },[])
+
+  // Set value to each fields
+  useEffect(()=>{
+    if(state) {
+      reset({
+        ActType: state.ActType,
+        hour: state.hour,
+        minute: state.minute,
+        date: newDate,
+        description: state.description
+      });
+    }
+  }, [state])
+
+  //When submit data patch each data
   const onSubmit = (data) => {
     console.log(data)
+    axios
+    .patch(`http://localhost:8080/activities/${id}`, data, { headers: { 'Content-Type': 'application/json' }})
+    .then((res) => {
+      console.log(res.data)
+      //popup to show it been save
+      Swal.fire(
+          'Great!',
+          'Your data had been edited.',
+          'success',
+      )
+    .then(()=> document.addEventListener("click", window.location = "/"))
+    })
+    .catch((err) => {
+        //popup to show if error
+        Swal.fire(
+            'Sorry for a problem!',
+            err.response.data.error,
+            'error'
+        )
+    })
   };
-
-
 
   return (
 <div>
@@ -23,7 +89,7 @@ const EditAct = () => {
       <form id="form2" onSubmit={handleSubmit(onSubmit)}>
         <div className="type2">
           <h2>Type activity : </h2>
-          <select {...register("ActType", { required: true })}>
+          <select {...register("ActType", { required: true }) }>
             <option value="">---- Select your activity ----</option>
             <option value="Running">Running  🏃</option>
             <option value="Swimming">Swimming  🏊🏻‍♂️</option>
@@ -54,7 +120,7 @@ const EditAct = () => {
 
         <div className="type3">
           <h2>Description</h2>
-          <textarea {...register("Description")}  />
+          <textarea {...register("description")}  />
         </div>
 
         <div className="btn2">
@@ -65,7 +131,6 @@ const EditAct = () => {
     </div>
     </div>
   );
-  
 };
 
 export default EditAct;
