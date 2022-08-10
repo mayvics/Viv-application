@@ -5,6 +5,7 @@
 .AddAct {
     display: flex;
     justify-content: center;
+    height: 60px;
 }
 
 .AddAct h1 {

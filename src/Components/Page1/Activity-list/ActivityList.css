@@ -48,4 +48,14 @@
 }
 
 
-
+@media only screen and (max-width: 1500px) {
+    .act-container {
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+        height: 900px;
+        background: #fd9d9dcc;
+        border-radius: 25px;
+        margin: 70px 0;
+    }
+}
