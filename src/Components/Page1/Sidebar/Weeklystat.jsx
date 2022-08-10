@@ -1,4 +1,5 @@
 import './Weeklystat.css';
+import statIcon from '../../../assets/stat-icon.png'
 import graph from '../../../assets/graph.png';
 
 const Weeklystat = () => {
@@ -6,6 +7,7 @@ const Weeklystat = () => {
         <>
             <div className='stat-container'>
                 <div className='text-container'>
+                    <img src={statIcon} id="stat-icon" />
                     <h3>Weekly stat</h3>
                 </div>
                 <div className='data-container'>
