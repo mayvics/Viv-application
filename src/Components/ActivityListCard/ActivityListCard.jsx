@@ -3,123 +3,68 @@ import './ActivityListCard.css';
 import barbel from './images/barbel.png'
 import swim from './images/swim.png'
 import bicycle from './images/bicycle.png'
-
 import logoRun from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
+import { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
 
-const ActivityListCard = () => {
-    return(
-        <div className="container-activity">
-            <div className="head-content">
-                <h1> Activity List</h1>
-            </div>
 
-            <div className="container-listcard">
 
-                    {/*        card 1          */}
+const ActivityListCard = (props) => {
+    const { data } = props;
+    const [currentItems, setCurrentItems] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [itemOffset, setItemOffset] = useState(0);
+    const itemsPerPage = 8
 
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { logoRun } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+  useEffect(() => {
+    // Fetch items from another resources.
+    const endOffset = itemOffset + itemsPerPage;
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    setCurrentItems(data.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(data.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage,data]);
 
-                {/*             card2            */}
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % data.length;
+    setItemOffset(newOffset);
+  };
 
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { barbel } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="container">
+        <div className="scroll">
+        <div className="posts">
+            <h1>ActivityList</h1>
+            {currentItems.map(post => { return <ul key= { post.id }>
 
-                {/*                 card3                */}
+              <li> { post.id} </li>    {/*   Activity type      */}
 
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { swim } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+              <li> { post.title } </li>  {/*   Duration      */}
 
-                {/*             card4            */}
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { bicycle } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+              <li>{ post.body } </li>   {/*   Date      */}
 
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { bicycle } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+              <li></li>     {/*   Description      */}
 
-            </div>
-            
-        </div>
-    )
+              </ul>
+})}
+        </div> 
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={3}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+        containerClassName= "pagegination"
+        pageLinkClassName="page-num"
+        previousClassName="page-num"
+      />
+      </div>
+    </div>
+  );
 }
 
-
 export default ActivityListCard
-
