@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./EditAct.css"
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from 'axios'
 import Swal from "sweetalert2";
 
@@ -125,7 +125,7 @@ const EditAct = () => {
 
         <div className="btn2">
         <input type="submit" value="Edit" />
-        <input type="submit" value="Cancel" />
+        <Link to="/" ><input type="submit" value="Cancel" /></Link>
         </div>
       </form>
     </div>
