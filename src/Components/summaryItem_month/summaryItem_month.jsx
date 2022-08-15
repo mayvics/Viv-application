@@ -1,9 +1,11 @@
 import React from 'react';
 import './summaryItem_month.css'
-
+import Chart from '../Piechart/Piechart';
 
 const SummaryItemMonth =() => {
     return (
+        <>
+            <Chart/>
             <div className="summary-card">
                 <div className="container-card">
 
@@ -46,6 +48,7 @@ const SummaryItemMonth =() => {
                     </div>
                 </div>
             </div>
+        </>
     )
 }
 

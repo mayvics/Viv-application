@@ -35,7 +35,7 @@ const EditAct = () => {
 
   //Receive id which pass from router
   const { id } = useParams();
-
+  console.log(id)
   //Get each data from id
   useEffect(()=>{
     axios.get(`http://localhost:8080/activities/${id}`)

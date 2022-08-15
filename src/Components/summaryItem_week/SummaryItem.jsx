@@ -2,7 +2,7 @@ import React from 'react';
 import './SummaryItem.css'
 
 
-const SummaryItem =() => {
+const SummaryItemWeek =() => {
     return (
             <div className="summary-card">
                 <div className="container-card">
@@ -59,4 +59,4 @@ const SummaryItem =() => {
     )
 }
 
-export default SummaryItem
+export default SummaryItemWeek;
