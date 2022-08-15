@@ -1,73 +1,113 @@
-* {
-    position: absolute;
-    width: 1440px;
-    height: 85px;
-    left: 0px;
-    top: 0px;
+.Navbar-container {
     background: #FFE7E7;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
 
 #logoIcon {
-    position: absolute;
-    width: 58px;
-    height: 58px;
-    left: 21px;
-    top: 13px;
-
+    width: 35px;
+    height: 35px;
+    margin: 0 20px;
 }
 
-h2 {
-    position: absolute;
-    width: 410px;
-    height: 52px;
-    left: 0px;
-    top: 19px;
-
-    font-family: 'Inter';
+#text-viv {
+    width: auto;
+    height: auto;
+    font-family: 'Varela Round', sans-serif;
     font-style: normal;
+    text-shadow: 2px 2px #eda3e68a;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     text-align: center;
-    
-    color: #000000;
-
+    color: #572e2ec0;
+    margin: 0px;
 }
 
 .schedule {
-    position: absolute;
-    width: 210px;
-    height: 57px;
-    left: 1213px;
-    top: 13px;
+    display: flex;
+    width: auto;
+    margin: 0px 20px;
 }
 
 #scheduleIcon {
-    position: absolute;
-    left: 0%;
-    right: 72.86%;
-    top: 0%;
-    bottom: 0%;
+margin: 0 20px;
+height: 35px;
+width: 35px;
+opacity: 0.5;
 }
 
-h3 {
-    position: absolute;
-left: 11.9%;
-right: 0%;
-top: 8.77%;
-bottom: 0%;
+#text-schedule {
+    margin: 0px;
+    font-family: 'Varela Round', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color:  #572e2ec0;
+}
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
+#text-viv:hover {
+    color: #572e2e;
+}
 
-color: #000000;
+#text-schedule:hover {
+    color: #572e2e;
+}
+
+#scheduleIcon:hover {
+    opacity: 0.7;
+    }
+
+
+/* hidden icons */
+
+#restip, #ressummary {
+    display: none;
+}
+
+#tipIcon, #summaryIcon {
+    margin: 0 20px;
+    height: 35px;
+    width: 35px;
+    opacity: 0.5;
+}
+
+#summaryIcon:hover {
+    opacity: 0.7;
+    }
+
+/* tablet version */
+@media only screen and (max-width: 1500px) {
+    #text-viv {
+       display: none;
+    }
+
+    #text-schedule {
+        display: none;
+    }
+
+    #scheduleIcon {
+        margin: 0;
+    }
+
+    #restip, #ressummary {
+        display: contents;
+    }
+
 }

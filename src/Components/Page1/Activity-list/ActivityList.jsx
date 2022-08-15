@@ -1,23 +1,24 @@
-import "./ActivityList.css"
+import "./ActivityList.css";
+import ActivityListCard from "./ActivityListCard";
+import AddActivity from "./AddActivity";
 
+import clickNext from './images/next.png';
+import clickPrev from './images/prev.png';
 
 const ActivityList = () => {
-    return (
-        <>
-        <div className="act-container">
-            <div className="com-container">
-                <h3>Activity list</h3>
-                <div className="btn-container">
-                    <button className="btn-left"><p>&lt;</p></button>
-                    <button className="btn-right"><p>&gt;</p></button>
+  return (
+    <div className="act-container">
+        <div className="head-content">
+                <h1> Activity List</h1>
+                <div className="head-btn">
+                    <a className="btn-left" href="#"><img src= { clickPrev } alt="previous" /></a>
+                    <a className="btn-right" href="#"><img src= { clickNext } alt="next" /></a>
                 </div>
             </div>
-            <div>
-                <button className="btn-add"><p>Add activity</p></button>
-            </div>
-        </div>
-        </>
-    )
-}
+        <ActivityListCard />
+        <AddActivity />
+    </div>
+  );
+};
 
 export default ActivityList;

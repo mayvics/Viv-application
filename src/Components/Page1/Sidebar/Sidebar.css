@@ -1,15 +1,10 @@
-* {
-    margin: 0px;
-}
-
 .sidebar {
-    position: absolute;
-    width: 535px;
-    height: 871px;
-    left: 55px;
-    top: 117px;
-
-    background: #FD9D9D;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 900px;
+    background: #fd9d9dcc;
     border-radius: 25px;
+    margin: 70px 20px 70px 100px;
 }
 
