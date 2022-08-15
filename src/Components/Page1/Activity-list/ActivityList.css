@@ -5,8 +5,8 @@
 .act-container {
     display: flex;
     flex-direction: column;
-    width: 700px;
-    height: 900px;
+    width: fit-content;
+    height: fit-content;
     background: #fd9d9dcc;
     border-radius: 25px;
     margin: 70px 100px 0px 20px;
@@ -52,8 +52,8 @@
     .act-container {
         display: flex;
         flex-direction: column;
-        width: 700px;
-        height: 900px;
+        width: fit-content;
+        height: fit-content;
         background: #fd9d9dcc;
         border-radius: 25px;
         margin: 70px 0;

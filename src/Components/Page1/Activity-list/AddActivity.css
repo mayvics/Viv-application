@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     height: 60px;
+    margin-bottom: 30px;
 }
 
 .AddAct h1 {
@@ -28,6 +29,7 @@
     filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .AddAct button:hover {
