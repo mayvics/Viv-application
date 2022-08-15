@@ -2,7 +2,7 @@
 .bigBox {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin: 0 50px 0 50px;
 }
 
 .bigBox p {
@@ -20,6 +20,7 @@
     background-color: #F1F1F1;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
+    margin: 50px;
 }
 
 .type {
@@ -30,24 +31,31 @@
     justify-content: center;
     align-items: center;
     background-color:#ffbcbc;
-    margin: 20px auto 0px;
+    margin: 30px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
 
 h2 {
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
+    font-style: normal;
     display: flex;
     align-items: center;
-    font-size: 40px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    font-size: 24px;
+    margin: 0;
 }
 
 .type select {
     border-radius: 20px;
     width: 430px;
     height: 50px;
-    font-size: 25px;
+    font-size: 22px;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
+    font-style: normal;
+    border: transparent;
+    margin: 10px;
 }
 
 
@@ -62,6 +70,10 @@ h2 {
 
 .type option {
     text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .boxDu {
@@ -76,7 +88,7 @@ h2 {
     width: 670px;
     justify-content: center;
     align-items: center;
-    background-color:#ffbcbc;
+    background-color:#fd9d9dcc;
     margin: 20px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
@@ -85,7 +97,8 @@ h2 {
 .cal h2 {
     display: flex;
     align-items: center;
-    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
     margin-bottom: 10px;
     margin-left: 10px;
 }
@@ -105,7 +118,7 @@ h2 {
     width: 670px;
     justify-content: center;
     align-items: center;
-    background-color:#ffbcbc;
+    background-color:#fd9d9dcc;
     margin: 20px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
@@ -127,7 +140,11 @@ h2 {
     width: 100px;
     height:50px;
     border-radius: 20px;
-    filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
-    background-color: #B9F2FF;
+    filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
+    background-color: #b9f2ffb6;;
     font-size: 20px;
+}
+
+.btn input:hover {
+    background: #b9f2ffd7;
 }
