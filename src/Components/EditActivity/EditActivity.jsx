@@ -38,7 +38,7 @@ const EditAct = () => {
   console.log(id)
   //Get each data from id
   useEffect(()=>{
-    axios.get(`http://localhost:8080/activities/${id}`)
+    axios.get(`http://localhost:8080/activities/show/${id}`)
     .then((res) => {
       const {ActType,hour,minute,date,description } = res.data
       setState({...state,ActType,hour,minute,date,description })

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .act-container {
@@ -25,22 +26,18 @@
 }
 
 .head-content{
-    padding-top: 20px;
-
+    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:40px 40px 0px 40px;
-
 }
 
 
-.head-content h1 {
+.head-content .actList {
     font-size: 30px;
     font-family: 'Varela Round', sans-serif;
     font-style: normal;
     color:  #572e2ec0;
-    margin-bottom: 20px;
 }
 
 .head-content img{
