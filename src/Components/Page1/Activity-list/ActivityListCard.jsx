@@ -1,12 +1,11 @@
 import React from "react";
 import './ActivityListCard.css';
-import barbel from './images/barbel.png'
+import barbel from "./images/barbel.png"
 import swim from './images/swim.png'
 import bicycle from './images/bicycle.png'
 import run from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -19,6 +18,7 @@ const ActivityListCard = (props) => {
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 5
+
 
   useEffect(() => {
     // Fetch items from another resources.
@@ -64,22 +64,6 @@ const ActivityListCard = (props) => {
         })
       }
 
-    //req to api to delete data
-    const deleteBlog = (id) => {
-        axios
-        .delete(`http://localhost:8080/activities/${id}`)
-        .then(()=>{
-        //popup for show it complete
-        Swal.fire(
-            "Delete complete!",
-            'Your data had been deleted.',
-            "success"
-        )
-        //Req to show new data after delete
-        fetchData()
-        })
-        .catch(err=>console.log(err))
-    }
 
   return (
     <div className="container">

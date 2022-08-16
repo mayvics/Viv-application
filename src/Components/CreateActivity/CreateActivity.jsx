@@ -79,11 +79,17 @@ const CreateAct = () => {
 
         <div className="btn">
 
-          <input type="submit" value="Add" />
+          <Link to="/">
+           
+              <input type="submit" value="Add" />
+          
+          </Link>
+          <Link to="/">
+           
+              <input type="submit" value="Cancel" />
+           
+          </Link>
 
-        <Link to="/">
-          <input type="submit" value="Cancel" />
-        </Link>
         </div>
       </form>
     </div>

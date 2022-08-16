@@ -1,5 +1,7 @@
 * {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .act-container {
@@ -24,11 +26,14 @@
 
 .head-content{
     padding-top: 20px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 40px 0;
+    margin:40px 40px 0px 40px;
+
 }
+
 
 .head-content h1 {
     font-size: 30px;
@@ -46,7 +51,8 @@
     padding: 10px;
     border-radius: 25px;
     box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
-
+    box-shadow: 0 25px 35px -20px rgb(0 0 0 / 15%);
+    padding: 15px;
 }
 
 
