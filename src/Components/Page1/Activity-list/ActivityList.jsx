@@ -5,9 +5,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-import axios from "axios";
-import { useState, useEffect } from "react";
-
 const ActivityList = () => {
 
   const [activity, setActivity] = useState([]);
