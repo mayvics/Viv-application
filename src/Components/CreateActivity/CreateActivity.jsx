@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import Navbar from "../Page1/Navbar/Navbar";
 import "./CreateActivity.css";
+import axios from "axios";
+import Swal from 'sweetalert2';
 
 const CreateAct = () => {
   const {
@@ -10,22 +10,46 @@ const CreateAct = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+
+  const onSubmit = (data) => {
+    console.log(data)
+    axios
+    .post(`http://localhost:8080/activities/create`, data, { headers: { 'Content-Type': 'application/json' }})
+    .then((res) => {
+      console.log(res.data)
+      //popup to show it been save
+      Swal.fire(
+          'Good job!',
+          'Your data had been saved.',
+          'success',
+      )
+    .then(()=> document.addEventListener("click", window.location = "/"))
+    })
+    .catch((err) => {
+        //popup to show if error
+        Swal.fire(
+            'Sorry for a problem!',
+            err.response.data.error,
+            'error'
+        )
+    })
+  };
+
 
   return (
 <div>
-
     <div className="bigBox">
       <form id="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="type">
           <h2>Type activity : </h2>
           <select {...register("ActType", { required: true })}>
             <option value="">---- Select your activity ----</option>
-            <option value="Running ">Running  🏃</option>
-            <option value="Swimming 🏊🏻">Swimming  🏊🏻‍♂️</option>
-            <option value="Hiking ">Hiking  🌲👨🏻‍🦯</option>
-            <option value="Riding bicycle ">Riding bicycle  🚴🏻‍♂️</option>
-            <option value="Walking ">Walking  🚶</option>
+            <option value="Running">Running  🏃</option>
+            <option value="Swimming">Swimming  🏊🏻‍♂️</option>
+            <option value="Hiking">Hiking  🌲👨🏻‍🦯</option>
+            <option value="Riding bicycle">Riding bicycle  🚴🏻‍♂️</option>
+            <option value="Walking">Walking  🚶</option>
           </select>
           {errors.ActType && <p>Type is required</p>}
         </div>
@@ -50,10 +74,11 @@ const CreateAct = () => {
 
         <div className="typeD">
           <h2>Description </h2>
-          <textarea {...register("aboutYou")} placeholder="Description" />
+          <textarea {...register("description")} placeholder="Description" />
         </div>
 
         <div className="btn">
+
           <Link to="/">
            
               <input type="submit" value="Add" />
@@ -64,6 +89,7 @@ const CreateAct = () => {
               <input type="submit" value="Cancel" />
            
           </Link>
+
         </div>
       </form>
     </div>

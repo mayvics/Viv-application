@@ -1,98 +1,70 @@
 import React from "react";
 import './ActivityListCard.css';
-import logoRun from './images/run.png';
+import barbel from "./images/barbel.png"
+import swim from './images/swim.png'
+import bicycle from './images/bicycle.png'
+import run from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 
-const ActivityListCard = () => {
-    return(
-        <div className="container-activity">
-            <div className="container-listcard">
-                    {/*        card 1          */}
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { logoRun } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <Link to="/edit"><img src= { edit } alt="" /></Link>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
 
-                {/*             card2            */}
 
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { logoRun } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+const ActivityListCard = (props) => {
+    const { data } = props;
+    const [currentItems, setCurrentItems] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [itemOffset, setItemOffset] = useState(0);
+    const itemsPerPage = 8
 
-                {/*                 card3                */}
+  useEffect(() => {
+    // Fetch items from another resources.
+    const endOffset = itemOffset + itemsPerPage;
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    setCurrentItems(data.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(data.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, data]);
 
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { logoRun } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % data.length;
+    setItemOffset(newOffset);
+  };
 
-                {/*             card4            */}
-                <div className="listCard">
-                    <div className="card">
-                        <div className="container-content">
-                            <img src= { logoRun } alt="" />
-                            <div>
-                                <p>Activity type :</p>
-                                <p>Duration :</p>
-                                <p>Date :</p>
-                                <p>Description :</p>
-                            </div>
-                        </div>
-                        <div className="card-btn">
-                            <a href="#"><img src= { edit } alt="" /></a>
-                            <a href="#"><img src= { remove } alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="container">
+        <div className="scroll">
+        <div className="posts">
+            {currentItems.map(post => { return <ul key= { post.id }>
 
-            </div>
-            
-        </div>
-    )
+              <li> { post.id} </li>    {/*   Activity type      */}
+
+              <li> { post.title } </li>  {/*   Duration      */}
+
+              <li>{ post.body } </li>   {/*   Date      */}
+
+              <li></li>     {/*   Description      */}
+
+              </ul>
+})}
+        </div> 
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={3}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+        containerClassName= "pagegination"
+        pageLinkClassName="page-num"
+        previousClassName="page-num"
+      />
+      </div>
+    </div>
+  );
 }
-
 
 export default ActivityListCard
 
