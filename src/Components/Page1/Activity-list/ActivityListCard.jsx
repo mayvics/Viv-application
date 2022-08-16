@@ -7,6 +7,7 @@ import run from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 import ReactPaginate from "react-paginate";
@@ -68,7 +69,7 @@ const ActivityListCard = (props) => {
   return (
     <div className="container">
         <div className="scroll">
-        <div className="posts">
+        <div className="container-listcard">
             {currentItems.map((act,index) => (
                     <div className="listCard" key={index} >
                         <div className="card" key={index} >
@@ -100,6 +101,7 @@ const ActivityListCard = (props) => {
         containerClassName= "pagegination"
         pageLinkClassName="page-num"
         previousClassName="page-num"
+        activeClassName="activePage"
       />
       </div>
     </div>

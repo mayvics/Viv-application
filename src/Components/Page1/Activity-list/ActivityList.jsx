@@ -5,9 +5,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-import axios from "axios";
-import { useState, useEffect } from "react";
-
 const ActivityList = () => {
 
   const [activity, setActivity] = useState([]);
@@ -15,7 +12,7 @@ const ActivityList = () => {
   //Fetch data from database to show at card
   const fetchData = () => {
     axios
-    .get(`http://localhost:8080/activities`) // mock up data
+    .get(`http://localhost:8080/activities`)
     .then((res) => {
       setActivity(res.data)
     })
@@ -31,10 +28,10 @@ const ActivityList = () => {
   return (
     <div className="act-container">
         <div className="head-content">
-          <h1> Activity List</h1>
+          <h1 className="actList"> Activity List</h1>
+          <AddActivity />
         </div>
         <ActivityListCard data= {activity}/>
-        <AddActivity />
     </div>
   );
 };
