@@ -1,5 +1,6 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { PieChart, Pie, Sector } from "recharts";
+import axios from "axios";
 
 const data = [
   { name: "Running", value: 400 },
@@ -8,7 +9,7 @@ const data = [
   { name: "Swimming", value: 200 }
 ];
 
-const renderActiveShape = (props) => {
+export const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const {
     cx,
@@ -81,8 +82,10 @@ const renderActiveShape = (props) => {
   );
 };
 
-export default function App() {
+export default function Chart() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [summary, setSummary] = useState([]);
+
   const onPieEnter = useCallback(
     (_, index) => {
       setActiveIndex(index);
@@ -90,14 +93,31 @@ export default function App() {
     [setActiveIndex]
   );
 
+  //Fetch data from database to show schedule
+  const fetchData = () => {
+    axios
+    .get(`http://localhost:8080/activities/summaryMonth`)
+    .then((res) => {
+      setSummary(res.data)
+    })
+    .catch((err) => {
+      alert(err)
+    })
+  }
 
+  console.table(summary)
+  console.log(summary._id)
+
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   return (
     <PieChart width={400} height={400}>
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
-        data={data}
+        data={summary}
         cx={200}
         cy={200}
         innerRadius={60}
@@ -109,3 +129,5 @@ export default function App() {
     </PieChart>
   );
 }
+
+

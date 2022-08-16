@@ -5,13 +5,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 const ActivityList = () => {
+
   const [activity, setActivity] = useState([]);
 
   //Fetch data from database to show at card
   const fetchData = () => {
     axios
-    .get(`https://jsonplaceholder.typicode.com/posts`)
+    .get(`http://localhost:8080/activities`) // mock up data
     .then((res) => {
       setActivity(res.data)
     })
@@ -23,7 +27,7 @@ const ActivityList = () => {
   useEffect(() => {
     fetchData()
   }, [])
-  
+
   return (
     <div className="act-container">
         <div className="head-content">
