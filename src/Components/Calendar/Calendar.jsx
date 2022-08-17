@@ -19,7 +19,7 @@ const MyCalendar = () => {
   //Fetch data from database to show schedule
   const fetchData = () => {
     axios
-    .get(`http://localhost:8080/schedule`)
+    .get(`${import.meta.env.VITE_API_URL}/schedule`)
     .then((res) => {
       setEvents(res.data)
     })
@@ -61,7 +61,7 @@ const MyCalendar = () => {
       ).then((result)=>{
         if(result.isConfirmed){
           axios
-          .delete(`http://localhost:8080/schedule/${myEvents._id}`)
+          .delete(`${import.meta.env.VITE_API_URL}/schedule/${myEvents._id}`)
           .then(()=>{
           //popup for show it complete
           Swal.fire(
@@ -99,7 +99,7 @@ const MyCalendar = () => {
 
   const sendData = () => {
       axios
-      .post(`http://localhost:8080/schedule/create`, {title, start, end})
+      .post(`${import.meta.env.VITE_API_URL}/schedule/create`, {title, start, end})
       .then((res) => {
           console.log(res.data)
           //popup to show it been save

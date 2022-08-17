@@ -38,7 +38,8 @@ const EditAct = () => {
   console.log(id)
   //Get each data from id
   useEffect(()=>{
-    axios.get(`http://localhost:8080/activities/${id}`)
+    axios
+    .get(`${import.meta.env.VITE_API_URL}/activities/show/${id}`)
     .then((res) => {
       const {ActType,hour,minute,date,description } = res.data
       setState({...state,ActType,hour,minute,date,description })
@@ -62,7 +63,7 @@ const EditAct = () => {
   const onSubmit = (data) => {
     console.log(data)
     axios
-    .patch(`http://localhost:8080/activities/${id}`, data, { headers: { 'Content-Type': 'application/json' }})
+    .patch(`${import.meta.env.VITE_API_URL}/activities/${id}`, data, { headers: { 'Content-Type': 'application/json' }})
     .then((res) => {
       console.log(res.data)
       //popup to show it been save

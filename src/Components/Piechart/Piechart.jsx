@@ -96,7 +96,7 @@ export default function Chart() {
   //Fetch data from database to show schedule
   const fetchData = () => {
     axios
-    .get(`http://localhost:8080/activities/summaryMonth`)
+    .get(`${import.meta.env.VITE_API_URL}/activities/summaryMonth`)
     .then((res) => {
       setSummary(res.data)
     })
