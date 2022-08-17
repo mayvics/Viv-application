@@ -15,7 +15,7 @@ const CreateAct = () => {
   const onSubmit = (data) => {
     console.log(data)
     axios
-    .post(`http://localhost:8080/activities/create`, data, { headers: { 'Content-Type': 'application/json' }})
+    .post(`${import.meta.env.VITE_API_URL}/activities/create`, data, { headers: { 'Content-Type': 'application/json' }})
     .then((res) => {
       console.log(res.data)
       //popup to show it been save

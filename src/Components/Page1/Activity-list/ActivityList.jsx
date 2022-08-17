@@ -1,14 +1,16 @@
 import "./ActivityList.css";
 import ActivityListCard from "./ActivityListCard";
 import AddActivity from "./AddActivity";
+
+import axios from "axios";
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 
+
 const ActivityList = () => {
-
-  const [activity, setActivity] = useState([]);
-
+=======
   //Fetch data from database to show at card
   const fetchData = () => {
     axios
@@ -21,9 +23,6 @@ const ActivityList = () => {
     })
   }
 
-  useEffect(() => {
-    fetchData()
-  }, [])
 
   return (
     <div className="act-container">

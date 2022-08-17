@@ -13,25 +13,45 @@ import Swal from "sweetalert2";
 import ReactPaginate from "react-paginate";
 
 
-const ActivityListCard = (props) => {
-    const { data } = props;
+const ActivityListCard = () => {
+
     const [currentItems, setCurrentItems] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 5
 
 
+    const [activity, setActivity] = useState([]);
+
+  //Fetch data from database to show at card
+  const fetchData = () => {
+    axios
+    .get(`${import.meta.env.VITE_API_URL}/activities`)
+    .then((res) => {
+      setActivity(res.data)
+    })
+    .catch((err) => {
+      alert(err)
+    })
+  }
+
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+
   useEffect(() => {
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(data.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(data.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, data]);
+    setCurrentItems(activity.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(activity.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, activity]);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % data.length;
+    const newOffset = (event.selected * itemsPerPage) % activity.length;
     setItemOffset(newOffset);
   };
   
@@ -64,6 +84,24 @@ const ActivityListCard = (props) => {
             }
         })
       }
+
+
+    //req to api to delete data
+    const deleteBlog = (id) => {
+        axios
+        .delete(`${import.meta.env.VITE_API_URL}/activities/${id}`)
+        .then(()=>{
+        //popup for show it complete
+        Swal.fire(
+            "Delete complete!",
+            'Your data had been deleted.',
+            "success"
+        )
+        //Req to show new data after delete
+        fetchData()
+        })
+        .catch(err=>console.log(err))
+    }
 
 
   return (
