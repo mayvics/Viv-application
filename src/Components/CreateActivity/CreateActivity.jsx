@@ -78,18 +78,12 @@ const CreateAct = () => {
         </div>
 
         <div className="btn">
-
+          <button style={{border: "0px", cursor: "pointer"}}>
+              <input type="submit" value="Add" style={{cursor: "pointer"}}/>
+          </button>
           <Link to="/">
-           
-              <input type="submit" value="Add" />
-          
+              <input type="submit" value="Cancel" style={{cursor: "pointer"}}/>
           </Link>
-          <Link to="/">
-           
-              <input type="submit" value="Cancel" />
-           
-          </Link>
-
         </div>
       </form>
     </div>

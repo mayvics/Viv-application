@@ -1,5 +1,4 @@
 import React from 'react';
-import ActivityList from '../Page1/Activity-list/ActivityList';
 import Navbar from '../Page1/Navbar/Navbar';
 import {  Route,  Routes } from "react-router-dom";
 import Page1 from '../Page1/Page1'
