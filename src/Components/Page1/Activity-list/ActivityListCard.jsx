@@ -1,13 +1,13 @@
 import React from "react";
 import './ActivityListCard.css';
-import barbel from './images/barbel.png'
+import barbel from "./images/barbel.png"
 import swim from './images/swim.png'
 import bicycle from './images/bicycle.png'
 import run from './images/run.png';
 import edit from './images/edit.png';
 import remove from './images/remove.png';
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 import ReactPaginate from "react-paginate";
@@ -19,6 +19,7 @@ const ActivityListCard = () => {
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 5
+
 
     const [activity, setActivity] = useState([]);
 
@@ -84,6 +85,7 @@ const ActivityListCard = () => {
         })
       }
 
+
     //req to api to delete data
     const deleteBlog = (id) => {
         axios
@@ -101,10 +103,11 @@ const ActivityListCard = () => {
         .catch(err=>console.log(err))
     }
 
+
   return (
     <div className="container">
         <div className="scroll">
-        <div className="posts">
+        <div className="container-listcard">
             {currentItems.map((act,index) => (
                     <div className="listCard" key={index} >
                         <div className="card" key={index} >
@@ -136,6 +139,7 @@ const ActivityListCard = () => {
         containerClassName= "pagegination"
         pageLinkClassName="page-num"
         previousClassName="page-num"
+        activeClassName="activePage"
       />
       </div>
     </div>

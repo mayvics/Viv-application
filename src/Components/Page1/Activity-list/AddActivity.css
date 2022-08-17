@@ -3,32 +3,28 @@
 }
 
 .AddAct {
-    display: flex;
-    justify-content: center;
     height: 60px;
-    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .AddAct h1 {
-    display: flex;
-    justify-content: center;
     font-family: 'Varela Round', sans-serif;
+    text-align: center;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     color: #572e2ec0;
 }
 
 .AddAct button{
-    display: flex;
-    border: transparent;
+    border: 0;
     background: #b9f2ffb6;
-    width: 250px;
+    width: 150px;
     height: 60px;
-    border-radius: 25px;
+    border-radius: 15px;
     filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 
