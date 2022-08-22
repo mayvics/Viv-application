@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
     background-color:#ffbcbc;
-    margin: 30px auto 0px;
+    margin: 20px 30px 0 30px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
@@ -54,7 +54,7 @@ h2 {
     font-family: 'Varela Round', sans-serif;
     color:  #572e2ec0;
     font-style: normal;
-    border: transparent;
+    border: none;
     margin: 10px;
 }
 
@@ -62,10 +62,11 @@ h2 {
 .type input {
     width: 90px;
     height: 50px;
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 10px;
     border-radius: 20px;
     text-align: center;
+    border: none;
 }
 
 .type option {
@@ -79,6 +80,16 @@ h2 {
 .boxDu {
     display: flex;
     flex-direction: row;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
+    font-style: normal;
+    padding-top: 10px;
+}
+
+.boxDu h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 550;
 }
 
 .cal {
@@ -88,7 +99,7 @@ h2 {
     width: 670px;
     justify-content: center;
     align-items: center;
-    background-color:#fd9d9dcc;
+    background-color:#ffbcbc;
     margin: 20px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
@@ -105,10 +116,14 @@ h2 {
 
 .cal input {
     border-radius: 20px;
-    width: 200px;
+    width: 250px;
     height: 50px;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
+    border: none;
+    padding: 0 15px;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
 }
 
 .typeD {
@@ -118,15 +133,19 @@ h2 {
     width: 670px;
     justify-content: center;
     align-items: center;
-    background-color:#fd9d9dcc;
+    background-color:#ffbcbc;
     margin: 20px auto 0px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
 
+.typeD h2 {
+    padding-bottom: 10px;
+}
 .typeD textarea {
     width: 600px;
     height:100px;
+    font-size: 16px;
 }
 
 .btn {
@@ -134,6 +153,7 @@ h2 {
     flex-direction: row;
     margin: 20px 70px ;
     justify-content: space-between;
+    border: none;
 }
 
 .btn input {
@@ -141,10 +161,12 @@ h2 {
     height:50px;
     border-radius: 20px;
     filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
-    background-color: #b9f2ffb6;;
+    background-color: #98b7acc7;
     font-size: 20px;
+    border: none;
+    color: #2c4135bb;
 }
 
 .btn input:hover {
-    background: #b9f2ffd7;
+    background: #b5ead7;
 }
