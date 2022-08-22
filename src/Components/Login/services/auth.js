@@ -3,8 +3,8 @@
 export const auth = (res, next) => {
     if (window !== "undefined") {
         //collect data to session storage
-        sessionStorage.setItem("token", JSON.stringify(res.data.data.token))
-        sessionStorage.setItem("email", JSON.stringify(res.data.data.email))
+        sessionStorage.setItem("token", JSON.stringify(res.data.token))
+        sessionStorage.setItem("email", JSON.stringify(res.data.email))
     }
     next()
 }

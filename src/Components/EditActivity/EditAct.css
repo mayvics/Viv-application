@@ -134,4 +134,5 @@ h3 {
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
     background-color: #B9F2FF;
     font-size: 20px;
+    cursor: pointer;
 }

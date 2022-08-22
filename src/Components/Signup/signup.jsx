@@ -2,15 +2,19 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
+import Swal from 'sweetalert2';
 
 const Signup = () => {
 	const [data, setData] = useState({
-		firstName: "",
+		name: "",
 		lastName: "",
 		email: "",
 		password: "",
 	});
+	const { name, lastname, email, password } = data
+
 	const [error, setError] = useState("");
+
 	const navigate = useNavigate();
 
 	const handleChange = ({ currentTarget: input }) => {
@@ -19,20 +23,19 @@ const Signup = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		try {
-			const url = "http://localhost:8080/users";
-			const { data: res } = await axios.post(url, data);
+		console.log(name, lastname, email, password)
+		await axios.post((`${import.meta.env.VITE_API_URL}/users`), { name, lastname, email, password })
+		.then(() => {
+			Swal.fire(
+				'Login success!',
+				'Thank you for register.',
+				'success'
+			)
 			navigate("/login");
-			console.log(res.message);
-		} catch (error) {
-			if (
-				error.response &&
-				error.response.status >= 400 &&
-				error.response.status <= 500
-			) {
-				setError(error.response.data.message);
-			}
-		}
+		})
+		.catch ((err) => {
+			setError(err.response.data.message)
+		})
 	};
 
 	return (
@@ -51,19 +54,19 @@ const Signup = () => {
 						<h1>Create Account</h1>
 						<input
 							type="text"
-							placeholder="First Name"
-							name="firstName"
+							placeholder="Name"
+							name="name"
 							onChange={handleChange}
-							value={data.firstName}
+							value={name}
 							required
 							className={styles.input}
 						/>
 						<input
 							type="text"
 							placeholder="Last Name"
-							name="lastName"
+							name="lastname"
 							onChange={handleChange}
-							value={data.lastName}
+							value={lastname}
 							required
 							className={styles.input}
 						/>
@@ -72,7 +75,7 @@ const Signup = () => {
 							placeholder="Email"
 							name="email"
 							onChange={handleChange}
-							value={data.email}
+							value={email}
 							required
 							className={styles.input}
 						/>
@@ -81,7 +84,7 @@ const Signup = () => {
 							placeholder="Password"
 							name="password"
 							onChange={handleChange}
-							value={data.password}
+							value={password}
 							required
 							className={styles.input}
 						/>
