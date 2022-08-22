@@ -10,19 +10,23 @@ const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
 	const [error, setError] = useState("");
 
+	const {email, password} = data
+
 	const handleChange = ({ currentTarget: input }) => {
 		setData({ ...data, [input.name]: input.value });
 	};
 
+	console.log(email,password)
 	//for redirect to another page
 	const navigate = useNavigate();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-			const url = "http://localhost:5500/api/login";
-			axios
-			.post(url, {username, password})
+			const url = "http://localhost:8080/auth/login";
+			await axios
+			.post(url, {email,password})
 			.then((res) => {
+				console.log(res.data.data.email)
 				Swal.fire(
 					'Login success!',
 					'Thank you for login.',
@@ -31,9 +35,10 @@ const Login = () => {
 				auth(res, ()=>{navigate("/")})
 			})
 			.catch((err) => {
+				console.log(err)
 				Swal.fire(
 					'Sorry for a problem!',
-					err.response.data.error,
+					err.response.data.message,
 					'error'
 				)
 			})

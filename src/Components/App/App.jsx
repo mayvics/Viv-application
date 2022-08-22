@@ -8,6 +8,8 @@ import Calendar from "../Calendar/Calendar";
 import SummaryItemWeek from "../summaryItem_week/SummaryItem";
 import PieChartMonth from '../Piechart/Piechart_month';
 import Login from '../Login/login';
+import AdminRoute from "./adminRoute";
+import Signup from '../Signup/signup';
 
 
 function App() {
@@ -16,13 +18,16 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Page1 />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/create" element={<CreateAct />} />
-        <Route path="/edit/:id" element={<EditAct />} />
-        <Route path="/schedule" element={<Calendar />} />
-        <Route path="/summary-Month" element={<PieChartMonth />} />
-        <Route path="/summary-Week" element={<SummaryItemWeek />} />
+        <Route element={<AdminRoute />}>
+          <Route path="/" element={<Page1 />} />
+          <Route path="/create" element={<CreateAct />} />
+          <Route path="/edit/:id" element={<EditAct />} />
+          <Route path="/schedule" element={<Calendar />} />
+          <Route path="/summary-Month" element={<PieChartMonth />} />
+          <Route path="/summary-Week" element={<SummaryItemWeek />} />
+        </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
       </Routes>
     </div>
   );

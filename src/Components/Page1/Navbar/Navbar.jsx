@@ -5,8 +5,14 @@ import schedule from "../Navbar/image/scheduleIcon.svg";
 import summary from '../Sidebar/images/summaryicon.png';
 import tip from '../../../assets/tip-topic.png'
 import { NavLink } from "react-router-dom";
+import { getToken, logout } from '../../Login/services/auth';
+import { useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
+
+    //for redirect to another page
+    const navigate = useNavigate();
+    
     return (
         <div className="Navbar-container">
             <NavLink to="/">
@@ -42,6 +48,16 @@ const Navbar = () => {
                 {/* link summary page */}
             </div>
             </NavLink>
+            {getToken() && (
+                        <div>
+                            <button onClick={()=>logout(()=>navigate("/"))}>Logout</button>
+                        </div>
+                    )}
+            {!getToken() && (
+                        <div>
+                            <button onClick={() => navigate("/login")}>Login</button>
+                        </div>
+                    )}
 
         </div>
     );
