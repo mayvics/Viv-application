@@ -75,13 +75,13 @@ const EditAct = () => {
           'Your data had been edited.',
           'success',
       )
-      .then(()=>navigate("/"))
+    .then(()=>navigate("/"))
     })
     .catch((err) => {
         //popup to show if error
         Swal.fire(
             'Sorry for a problem!',
-            err.response.data.error,
+            err.response.data,
             'error'
         )
     })
