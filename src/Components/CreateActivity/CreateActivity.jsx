@@ -15,7 +15,7 @@ const CreateAct = () => {
   const onSubmit = (data) => {
     console.log(data)
     axios
-    .post(`http://localhost:8080/activities/create`, data, { headers: { 'Content-Type': 'application/json' }})
+    .post(`${import.meta.env.VITE_API_URL}/activities/create`, data, { headers: { 'Content-Type': 'application/json' }})
     .then((res) => {
       console.log(res.data)
       //popup to show it been save
@@ -78,12 +78,12 @@ const CreateAct = () => {
         </div>
 
         <div className="btn">
-
-          <input type="submit" value="Add" />
-
-        <Link to="/">
-          <input type="submit" value="Cancel" />
-        </Link>
+          <button style={{border: "0px", cursor: "pointer"}}>
+              <input type="submit" value="Add" style={{cursor: "pointer"}}/>
+          </button>
+          <Link to="/">
+              <input type="submit" value="Cancel" style={{cursor: "pointer"}}/>
+          </Link>
         </div>
       </form>
     </div>

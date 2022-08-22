@@ -4,19 +4,10 @@
     box-sizing: border-box;
 }
 
-.container-activity{
-    width: fit-content;
-    height: auto;
-    padding: 0 40px;
-}
-
-.container-listcard {
-    margin: 40px 0;
-}
 
 .listCard{
     background-color: #F1F1F1;
-    width: 100%;
+    width: 600px;
     height: fit-content;
     border-radius: 25px;
     margin-bottom: 20px;
@@ -73,10 +64,25 @@
 }
 
 
+/*  Pagination */
+.pagegination{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.activePage {
+    background-color:rgb(171, 207, 255);
+}
 
+.pagegination li{
+    padding: 5px;
+    font-size: 1.2em;
+}
 
-
-
-
-
+.pagegination li:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+}

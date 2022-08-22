@@ -1,5 +1,8 @@
 * {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .act-container {
@@ -10,6 +13,7 @@
     background: #fd9d9dcc;
     border-radius: 25px;
     margin: 70px 100px 0px 20px;
+    padding: 30px;
 }
 
 .act-container h3 {
@@ -22,15 +26,15 @@
 }
 
 .head-content{
-    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 40px 0;
 }
 
-.head-content h1 {
-    font-size: 24px;
+
+.head-content .actList {
+    font-size: 30px;
     font-family: 'Varela Round', sans-serif;
     font-style: normal;
     color:  #572e2ec0;
@@ -44,7 +48,8 @@
     padding: 10px;
     border-radius: 25px;
     box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
-
+    box-shadow: 0 25px 35px -20px rgb(0 0 0 / 15%);
+    padding: 15px;
 }
 
 

@@ -25,7 +25,7 @@ const PopupForm = () => {
 
     const sendData = () => {
         axios
-        .post(`http://localhost:8080/schedule/create`, {title, start, end})
+        .post(`${import.meta.env.VITE_API_URL}/schedule/create`, {title, start, end})
         .then((res) => {
             console.log(res.data)
             //popup to show it been save

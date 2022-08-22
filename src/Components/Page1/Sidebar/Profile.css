@@ -4,10 +4,10 @@
 
 .profile {
     display: flex;
-    width: 444px;
-    height: 119px;
+    width: 420px;
+    height: 120px;
     align-items: center;
-    margin: 30px auto 15px;
+    margin: 30px 40px 15px;
 }
 
 .profile img {
