@@ -19,16 +19,25 @@
 }
 
 .AddAct button{
+
+    display: flex;    
+    width: 250px;
+
     border: 0;
     background: #b9f2ffb6;
     width: 150px;
+
     height: 60px;
     border-radius: 15px;
     filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
     cursor: pointer;
+    background-color: #98b7acc7;
+    font-size: 20px;
+    border: none;
+    color: #2c4135bb;
 }
 
 .AddAct button:hover {
-    background: #b9f2ffd7;
+    background: #b5ead7;
 }
 
