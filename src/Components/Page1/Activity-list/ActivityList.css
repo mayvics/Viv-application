@@ -30,6 +30,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-shadow: 0 25px 35px -20px rgb(0 0 0 / 15%);
 }
 
 
@@ -50,6 +52,29 @@
     box-shadow: 5px 5px 4px rgb(0 0 0 / 0.2);
     box-shadow: 0 25px 35px -20px rgb(0 0 0 / 15%);
     padding: 15px;
+}
+
+/*  Pagination */
+.pagegination{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activePage {
+    background-color:rgb(171, 207, 255);
+}
+
+.pagegination li{
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.pagegination li:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
 }
 
 

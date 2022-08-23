@@ -3,15 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
+.scroll{
+    overflow: scroll;
+    height: 760px;
+}
+.container-listcard{
+    padding: 0 15px 0 0;
+    margin-top: 70px;
+}
 .listCard{
     background-color: #F1F1F1;
     width: 600px;
     height: fit-content;
     border-radius: 25px;
     margin-bottom: 20px;
-    filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card{
@@ -23,6 +29,8 @@
 .container-content{
     display: flex;
     line-height: 1.5em;
+    overflow: hidden;
+
 }
 
 .container-content img{
@@ -45,6 +53,7 @@
     font-style: normal;
 }
 
+
 .card-btn{
     display: flex;
     flex-direction: column;
@@ -64,7 +73,7 @@
 }
 
 
-/*  Pagination */
+ /* Pagination */
 .pagegination{
     width: 100%;
     list-style: none;
@@ -82,7 +91,7 @@
     font-size: 1.2em;
 }
 
-.pagegination li:hover{
+.pagegination li a:hover{
     cursor: pointer;
     background-color: antiquewhite;
 }

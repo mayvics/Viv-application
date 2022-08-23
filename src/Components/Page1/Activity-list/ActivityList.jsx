@@ -12,6 +12,7 @@ const ActivityList = () => {
           <AddActivity />
         </div>
         <ActivityListCard />
+        
     </div>
   );
 };
