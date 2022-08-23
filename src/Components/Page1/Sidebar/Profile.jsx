@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Avatar from "@mui/material/Avatar";
 import IconButton from '@mui/material/IconButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
@@ -52,21 +51,25 @@ const Profile =() => {
         setProfile(res.data)
     }).catch((err) => {
         alert(err)
-      })
-      axios.get(`http://localhost:8080/users/profile`, {headers: {authorization: `Bearer ${getToken()}`}})
-      .then ((res) => {
-        setDBUrl(res.data.url)
+    })
+  }
+
+  const fetchImg = () => {
+    axios.get(`http://localhost:8080/users/profile`, {headers: {authorization: `Bearer ${getToken()}`}})
+    .then ((res) => {
+      setDBUrl(res.data.url)
     }).catch((err) => {
         alert(err)
-      })
+    })
   }
 
   useEffect(() => {
     fetchData()
+    fetchImg()
   }, [])
 
   useEffect(() => {
-    fetchData()
+    fetchImg()
   }, [dbUrl])
 
   return (
