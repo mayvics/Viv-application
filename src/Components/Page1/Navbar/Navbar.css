@@ -19,7 +19,7 @@ a {
 #logoIcon {
     width: 35px;
     height: 35px;
-    margin: 0 20px;
+    margin-left: 20px;
 }
 
 #text-viv {
@@ -40,7 +40,7 @@ a {
 .schedule {
     display: flex;
     width: auto;
-    margin: 0px 20px;
+    margin: 0;
 }
 
 #text-schedule, #text-summary, #text-tip {
@@ -67,19 +67,23 @@ a {
     opacity: 0.7;
 }
 
-.login .logout {
+.login, .logout {
     width: auto;
+}
+
+.login p, .logout p {
+    margin-right: 20px;
 }
 
 .login button, .logout button {
     background: transparent;
     border: none;
     font-family: 'Varela Round', sans-serif;
-    padding: 10px 10px;
+    padding: 0;
 }
 
 #loginIcon {
-    margin: 0 20px;
+    margin-right: 20px;
     height: 25px;
     width: 30px;
     opacity: 0.5;
@@ -96,6 +100,8 @@ a {
     opacity: 0.5;
 }
 
+
+
 /* hidden icons */
 @media only screen and (min-width: 1500px) {
     #tipIcon, #summaryIcon, #scheduleIcon {
@@ -111,6 +117,11 @@ a {
 
     #tipIcon, #summaryIcon, #scheduleIcon {
         display: content;
+        margin: 0;
+    }
+
+    a.active {
+        margin: 0;
     }
 
     #text-schedule, #text-summary, #text-tip {
