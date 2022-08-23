@@ -19,7 +19,7 @@ a {
 #logoIcon {
     width: 35px;
     height: 35px;
-    margin: 0 20px;
+    margin-left: 20px;
 }
 
 #text-viv {
@@ -40,22 +40,15 @@ a {
 .schedule {
     display: flex;
     width: auto;
-    margin: 0px 20px;
+    margin: 0;
 }
 
-#scheduleIcon {
-margin: 0 20px;
-height: 35px;
-width: 35px;
-opacity: 0.5;
-}
-
-#text-schedule {
+#text-schedule, #text-summary, #text-tip {
     margin: 0px;
     font-family: 'Varela Round', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -66,31 +59,55 @@ opacity: 0.5;
     color: #572e2e;
 }
 
-#text-schedule:hover {
+#text-schedule:hover, #text-summary:hover, #text-tip:hover {
     color: #572e2e;
 }
 
 #scheduleIcon:hover {
     opacity: 0.7;
-    }
-
-
-/* hidden icons */
-
-#restip, #ressummary {
-    display: none;
 }
 
-#tipIcon, #summaryIcon {
+.login, .logout {
+    width: auto;
+}
+
+.login p, .logout p {
+    margin-right: 20px;
+}
+
+.login button, .logout button {
+    background: transparent;
+    border: none;
+    font-family: 'Varela Round', sans-serif;
+    padding: 0;
+}
+
+#loginIcon {
+    margin-right: 20px;
+    height: 25px;
+    width: 30px;
+    opacity: 0.5;
+}
+
+#loginIcon:hover {
+    opacity: 0.7;
+}
+
+#tipIcon, #summaryIcon, #scheduleIcon {
     margin: 0 20px;
     height: 35px;
     width: 35px;
     opacity: 0.5;
 }
 
-#summaryIcon:hover {
-    opacity: 0.7;
+
+
+/* hidden icons */
+@media only screen and (min-width: 1500px) {
+    #tipIcon, #summaryIcon, #scheduleIcon {
+    display: none;
     }
+}
 
 /* tablet version */
 @media only screen and (max-width: 1500px) {
@@ -98,16 +115,19 @@ opacity: 0.5;
        display: none;
     }
 
-    #text-schedule {
-        display: none;
-    }
-
-    #scheduleIcon {
+    #tipIcon, #summaryIcon, #scheduleIcon {
+        display: content;
         margin: 0;
     }
 
-    #restip, #ressummary {
-        display: contents;
+    a.active {
+        margin: 0;
     }
 
+    #text-schedule, #text-summary, #text-tip {
+        display: none;
+    }
+    #summaryIcon:hover, #tipIcon:hover, #scheduleIcon:hover {
+    opacity: 0.7;
+    }
 }

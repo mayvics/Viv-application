@@ -17,6 +17,7 @@ justify-content: center;
     display: none;
 }
 
+
 @media only screen and (max-width: 768px) {
     div.body {
         display: flex;
@@ -56,4 +57,4 @@ justify-content: center;
         display: flex;
         justify-content: center;
     }
-}
+}  
