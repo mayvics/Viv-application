@@ -24,7 +24,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log(name, lastname, email, password)
-		await axios.post((`https://back-end-viv-application.vercel.app/users`), { name, lastname, email, password })
+		await axios.post((`${import.meta.env.VITE_API_URL}/users`), { name, lastname, email, password })
 		.then(() => {
 			Swal.fire(
 				'Login success!',

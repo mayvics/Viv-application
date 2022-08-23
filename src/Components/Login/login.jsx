@@ -21,7 +21,7 @@ const Login = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
-			const url = `https://back-end-viv-application.vercel.app/users/login`;
+			const url = `${import.meta.env.VITE_API_URL}/users/login`;
 			await axios
 			.post(url, {email,password})
 			.then((res) => {
