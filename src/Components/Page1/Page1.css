@@ -27,7 +27,11 @@ justify-content: center;
 
     div.sidebar {
        display: none;
+    }
 
+    .Profile-top {
+        display: flex;
+        justify-content: center;
     }
 
     .Profile-top div.profile {

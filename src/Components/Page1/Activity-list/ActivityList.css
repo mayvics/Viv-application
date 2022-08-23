@@ -8,8 +8,8 @@
 .act-container {
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    height: fit-content;
+    width: 700px;
+    height: 900px;
     background: #fd9d9dcc;
     border-radius: 25px;
     margin: 70px 100px 0px 20px;

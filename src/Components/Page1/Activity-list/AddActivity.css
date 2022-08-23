@@ -22,11 +22,11 @@
 
     display: flex;    
     width: 250px;
-
+    justify-content: center;
     border: 0;
     background: #b9f2ffb6;
     width: 150px;
-
+    align-items: center;
     height: 60px;
     border-radius: 15px;
     filter: drop-shadow(8px 6px 6px rgba(0, 0, 0, 0.15));
