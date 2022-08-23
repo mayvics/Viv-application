@@ -18,7 +18,7 @@ const CreateAct = () => {
   const onSubmit = (data) => {
     console.log(data)
     axios
-    .post(`https://back-end-viv-application.vercel.app/users/me/activities/create`, data, {headers: {authorization: `Bearer ${getToken()}`}})
+    .post(`${import.meta.env.VITE_API_URL}/users/me/activities/create`, data, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       console.log(res.data)
       //popup to show it been save
@@ -61,14 +61,13 @@ const CreateAct = () => {
           <h2>Duration : </h2>
           <div className="boxDu">
             <input type="number" min="0" max="24"{...register("hour", { required: true})} />
-            {errors.hour && <p>Hour is required</p>}
             <h3>Hours</h3>
             <input type="number" min="0" max="59"{...register("minute", { required: true })} />
-            {errors.minute && <p>Minutes is required</p>}
             <h3>Minutes</h3>
           </div>
+          {errors.hour && <p>Hour is required</p>}
+          {errors.minute && <p>Minutes is required</p>}
         </div>
-
         <div className="cal">
           <h2>Date : </h2>
           <input type="date" {...register("date", { required: true})} />

@@ -17,7 +17,7 @@ justify-content: center;
     display: none;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 768px) {
     div.body {
         display: flex;
         flex-direction: column;

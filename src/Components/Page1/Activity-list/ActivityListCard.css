@@ -75,6 +75,7 @@
 
 .activePage {
     background-color:rgb(171, 207, 255);
+    border-radius: 50%;
 }
 
 .pagegination li{
@@ -84,5 +85,7 @@
 
 .pagegination li:hover{
     cursor: pointer;
+    border-radius: 50%;
     background-color: antiquewhite;
+    transition: 0.4s;
 }

@@ -9,7 +9,6 @@ const Page1 = () => {
     <div className="Page1">
       <div className="body">
         <div className="Profile-top" >
-            <Profile />
         </div>
         <Sidebar />
         <div className="Activity">

@@ -2,25 +2,35 @@
     margin: 0px;
 }
 
-.profile {
+.con-profile  {
+    margin: 0px auto;
     display: flex;
-    width: 420px;
-    height: 120px;
+    flex-direction: column;
     align-items: center;
-    margin: 30px 40px 15px;
+    padding-top: 30px;
 }
 
-.profile img {
-    width:100px;
-    height: 100px;
-    margin-left: 15px;
-}
 
-.profile h1 {
-   margin-left: 30px;
+.profileName {
    font-family: 'Varela Round', sans-serif;
    font-style: normal;
-   font-weight: 500;
-   font-size: 22px;
-   color: #572e2ef0;
+   font-weight: 700;
+   font-size: 28px;
+   padding: 10px 0px;
+}
+
+.up-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload {
+    background-color: transparent;
+    border: 0px;
+    padding: 6px;
+}
+.check {
+    width: 20px;
+    cursor: pointer;
+    opacity: 60%;
 }
