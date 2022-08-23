@@ -2,6 +2,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
 import axios from "axios";
 import './summaryItem_month.css'
+import { getToken } from "../Login/services/auth";
 
 
 export const renderActiveShape = (props) => {
@@ -96,10 +97,11 @@ export default function PieChartMonth() {
   //Fetch data from database to show schedule
   const fetchData = () => {
     axios
-    .get(`${import.meta.env.VITE_API_URL}/activities/summaryMonth`)
+    .get(`https://back-end-viv-application.vercel.app/users/me/activities/summaryMonth`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       const datas = res.data;
       const summary = datas.map((data) => ({
+        user: data._id.user,
         month: data._id.month,
         type: data._id.type,
         hour: (data.total_hour),

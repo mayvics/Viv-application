@@ -4,7 +4,7 @@ export const auth = (res, next) => {
     if (window !== "undefined") {
         //collect data to session storage
         sessionStorage.setItem("token", JSON.stringify(res.data.token))
-        sessionStorage.setItem("user", JSON.stringify(res.data.username))
+        sessionStorage.setItem("email", JSON.stringify(res.data.email))
     }
     next()
 }
@@ -34,7 +34,7 @@ export const getUser = () => {
 export const logout = (next) => {
     if(window !== "undefined") {
         sessionStorage.removeItem("token")
-        sessionStorage.removeItem("user")
+        sessionStorage.removeItem("email")
     }
     next()
 }

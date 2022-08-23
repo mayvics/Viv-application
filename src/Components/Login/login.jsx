@@ -10,6 +10,8 @@ const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
 	const [error, setError] = useState("");
 
+	const {email, password} = data
+
 	const handleChange = ({ currentTarget: input }) => {
 		setData({ ...data, [input.name]: input.value });
 	};
@@ -18,10 +20,10 @@ const Login = () => {
 	const navigate = useNavigate();
 
 	const handleSubmit = async (e) => {
-		e.preventDefault();
-			const url = "http://localhost:5500/api/login";
-			axios
-			.post(url, {username, password})
+		e.preventDefault()
+			const url = `https://back-end-viv-application.vercel.app/users/login`;
+			await axios
+			.post(url, {email,password})
 			.then((res) => {
 				Swal.fire(
 					'Login success!',
@@ -30,12 +32,8 @@ const Login = () => {
 				)
 				auth(res, ()=>{navigate("/")})
 			})
-			.catch((err) => {
-				Swal.fire(
-					'Sorry for a problem!',
-					err.response.data.error,
-					'error'
-				)
+			.catch ((err) => {
+				setError(err.response.data.message)
 			})
 	};
 
