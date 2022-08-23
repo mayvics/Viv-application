@@ -18,7 +18,7 @@ const CreateAct = () => {
   const onSubmit = (data) => {
     console.log(data)
     axios
-    .post(`http://localhost:8080/users/me/activities/create`, data, {headers: {authorization: `Bearer ${getToken()}`}})
+    .post(`https://back-end-viv-application.vercel.app/users/me/activities/create`, data, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       console.log(res.data)
       //popup to show it been save

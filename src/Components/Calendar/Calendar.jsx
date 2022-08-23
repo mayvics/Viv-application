@@ -20,7 +20,7 @@ const MyCalendar = () => {
   //Fetch data from database to show schedule
   const fetchData = () => {
     axios
-    .get(`http://localhost:8080/users/me/schedule`, {headers: {authorization: `Bearer ${getToken()}`}})
+    .get(`https://back-end-viv-application.vercel.app/users/me/schedule`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       setEvents(res.data)
     })
@@ -62,7 +62,7 @@ const MyCalendar = () => {
       ).then((result)=>{
         if(result.isConfirmed){
           axios
-          .delete(`http://localhost:8080/users/me/schedule/${myEvents._id}`, {headers: {authorization: `Bearer ${getToken()}`}})
+          .delete(`https://back-end-viv-application.vercel.app/users/me/schedule/${myEvents._id}`, {headers: {authorization: `Bearer ${getToken()}`}})
           .then(()=>{
           //popup for show it complete
           Swal.fire(
@@ -100,7 +100,7 @@ const MyCalendar = () => {
 
   const sendData = () => {
       axios
-      .post(`http://localhost:8080/users/me/schedule/create`, {title, start, end}, {headers: {authorization: `Bearer ${getToken()}`}})
+      .post(`https://back-end-viv-application.vercel.app/users/me/schedule/create`, {title, start, end}, {headers: {authorization: `Bearer ${getToken()}`}})
       .then((res) => {
           console.log(res.data)
           //popup to show it been save

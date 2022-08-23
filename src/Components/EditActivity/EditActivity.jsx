@@ -43,7 +43,7 @@ const EditAct = () => {
   //Get each data from id
   useEffect(()=>{
     axios
-    .get(`http://localhost:8080/users/me/activities/show/${id}`, {headers: {authorization: `Bearer ${getToken()}`}})
+    .get(`https://back-end-viv-application.vercel.app/users/me/activities/show/${id}`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       const {ActType,hour,minute,date,description } = res.data
       setState({...state,ActType,hour,minute,date,description })
@@ -67,7 +67,7 @@ const EditAct = () => {
   const onSubmit = (data) => {
     console.log(data)
     axios
-    .patch(`http://localhost:8080/users/me/activities/${id}`,data , {headers: {authorization: `Bearer ${getToken()}`}})
+    .patch(`https://back-end-viv-application.vercel.app/users/me/activities/${id}`,data , {headers: {authorization: `Bearer ${getToken()}`}})
     .then(() => {
       //popup to show it been save
       Swal.fire(

@@ -27,7 +27,7 @@ const ActivityListCard = () => {
   //Fetch data from database to show at card
   const fetchData = () => {
     axios
-    .get(`http://localhost:8080/users/me/activities`, {headers: {authorization: `Bearer ${getToken()}`}})
+    .get(`https://back-end-viv-application.vercel.app/users/me/activities`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       setActivity(res.data)
     })
@@ -90,7 +90,7 @@ const ActivityListCard = () => {
     //req to api to delete data
     const deleteBlog = (id) => {
         axios
-        .delete(`http://localhost:8080/users/me/activities/${id}`, {headers: {authorization: `Bearer ${getToken()}`}})
+        .delete(`https://back-end-viv-application.vercel.app/users/me/activities/${id}`, {headers: {authorization: `Bearer ${getToken()}`}})
         .then(()=>{
         //popup for show it complete
         Swal.fire(

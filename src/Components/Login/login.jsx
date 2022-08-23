@@ -21,7 +21,7 @@ const Login = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
-			const url = `http://localhost:8080/users/login`;
+			const url = `https://back-end-viv-application.vercel.app/users/login`;
 			await axios
 			.post(url, {email,password})
 			.then((res) => {

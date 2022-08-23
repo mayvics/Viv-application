@@ -97,7 +97,7 @@ export default function PieChartMonth() {
   //Fetch data from database to show schedule
   const fetchData = () => {
     axios
-    .get(`http://localhost:8080/users/me/activities/summaryMonth`, {headers: {authorization: `Bearer ${getToken()}`}})
+    .get(`https://back-end-viv-application.vercel.app/users/me/activities/summaryMonth`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then((res) => {
       const datas = res.data;
       const summary = datas.map((data) => ({
