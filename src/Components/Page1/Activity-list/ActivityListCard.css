@@ -5,11 +5,11 @@
 }
 .scroll{
     overflow: scroll;
-    height: 760px;
+    height: 730px;
 }
 .container-listcard{
     padding: 0 15px 0 0;
-    margin-top: 70px;
+    margin-top: 10px;
 }
 .listCard{
     background-color: #F1F1F1;
