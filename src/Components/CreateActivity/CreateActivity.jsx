@@ -45,7 +45,7 @@ const CreateAct = () => {
     <div className="bigBox">
       <form id="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="type">
-          <h2>Type activity : </h2>
+          <h2>Activity type : </h2>
           <select {...register("ActType", { required: true })}>
             <option value="">---- Select your activity ----</option>
             <option value="Running">Running  🏃</option>
