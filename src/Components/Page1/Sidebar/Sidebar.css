@@ -6,8 +6,5 @@
     background: #fd9d9dcc;
     border-radius: 25px;
     margin: 70px 20px 70px 100px;
-}
-
-.hidden {
-    display: none;
+    overflow: scroll;
 }

@@ -5,6 +5,8 @@
 }
 
 .summary-card{
+    margin-top: 20px;
+    margin-left: 20px;
     background-color: #FD9D9D;
     width: 450px;
     height: auto;
@@ -13,6 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 30%;
 }
 
 
@@ -41,14 +44,14 @@
 
 .p-container {
     display: flex;
-    flex-direction: column;
     margin: 0px auto;
     align-items: center;
+    width: 100%;
 }
 
 .pieChart {
     height: 400px;
-    width: 100%;
-    margin: 30px;
+    width: 70%;
+    margin-left: 50px;
 }
 
