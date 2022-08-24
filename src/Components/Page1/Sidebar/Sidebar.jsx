@@ -8,9 +8,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <Profile />
-      <Weeklystat />
+      <div class="hidden"><Weeklystat /></div>
       <Tips />
-      <Summary />
+      <div class="hidden"><Summary /></div>
     </div>
   );
 };

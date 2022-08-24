@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="tip"> 
                 <img id="tipIcon" src={tip} alt="tip icon" />
                 {/* link tip page */}
-                <h3 id="text-tip">Tip</h3>
+                <h3 id="text-tip">Tips</h3>
             </div>
             </NavLink>
 

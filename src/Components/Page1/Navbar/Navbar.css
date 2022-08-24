@@ -100,6 +100,10 @@ a {
     opacity: 0.5;
 }
 
+/* Hide summary link */
+#ressummary {
+    display: none;
+}
 
 
 /* hidden icons */
