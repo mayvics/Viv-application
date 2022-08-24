@@ -92,7 +92,7 @@ const EditAct = () => {
     <div className="bigBox2">
       <form id="form2" onSubmit={handleSubmit(onSubmit)}>
         <div className="type2">
-          <h2>Type activity : </h2>
+          <h2>Activity type : </h2>
           <select {...register("ActType", { required: true }) }>
             <option value="">---- Select your activity ----</option>
             <option value="Running">Running  🏃</option>

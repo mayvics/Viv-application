@@ -30,11 +30,11 @@
     display: flex;
     flex-direction: column;
     height: 120px;
-    width: 620px;
+    max-width: 620px;
     justify-content: center;
     align-items: center;
     background-color:#ffbcbc;
-    margin: 20px 30px 0 30px;
+    margin: 30px 40px 0 40px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
@@ -50,18 +50,22 @@ h2 {
 }
 
 h3 {
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 550;
 }
 
 .type2 select {
     border-radius: 20px;
-    width: 430px;
+    max-width: 450px;
     height: 50px;
-    font-size: 25px;
+    font-size: 22px;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
+    font-style: normal;
+    border: none;
+    margin: 10px;
+    padding: 0 10px;
     text-align: center;
 }
 
@@ -69,26 +73,43 @@ h3 {
 .type2 input {
     width: 90px;
     height: 50px;
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 10px;
     border-radius: 20px;
+    width: 100px;
+    height: 50px;
     text-align: center;
+    border: none;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .boxDu2 {
     display: flex;
     flex-direction: row;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
+    font-style: normal;
+    padding-top: 10px;
+}
+
+.boxDu2 h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 550;
 }
 
 .calendar2 {
     display: flex;
     flex-direction: column;
     height: 120px;
-    width: 670px;
+    max-width: 620px;
     justify-content: center;
     align-items: center;
-    background-color:#ffbcbc;
-    margin: 20px auto 0px;
+    background-color: #ffbcbc;
+    margin: 30px 40px 0 40px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
@@ -96,42 +117,54 @@ h3 {
 .calendar2 h2 {
     display: flex;
     align-items: center;
-    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
     margin-bottom: 10px;
     margin-left: 10px;
 }
 
 .calendar2 input {
     border-radius: 20px;
-    width: 200px;
+    max-width: 250px;
     height: 50px;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
+    border: none;
+    padding: 0 15px;
+    font-family: 'Varela Round', sans-serif;
+    color:  #572e2ec0;
 }
 
 .type3 {
     display: flex;
     flex-direction: column;
     height: 200px;
-    width: 670px;
+    max-width: 620px;
     justify-content: center;
     align-items: center;
     background-color:#ffbcbc;
-    margin: 20px auto 0px;
+    margin: 30px 40px 0 40px;
     border-radius: 20px;
     filter: drop-shadow(7px 6px 4px rgba(0, 0, 0, 0.2));
 }
 
+.type3 h2 {
+    padding-bottom: 10px;
+}
+
 .type3 textarea {
-    width: 600px;
+    max-width: 540px;
     height:100px;
+    font-size: 16px;
+    width: 80%;
 }
 
 .btn2 {
     display: flex;
     flex-direction: row;
-    margin: 20px 70px ;
+    margin: 30px 70px 30px 70px ;
     justify-content: space-between;
+    border: none;
 }
 
 .btn2 input {
@@ -151,4 +184,37 @@ h3 {
 
 .btn2 input:hover {
     background: #b5ead7;
+}
+
+
+@media screen and (max-width: 700px) {
+    .bigBox2 {
+        margin: 10px;
+    }
+
+    #form2 {
+        margin: 10px;
+        width: 100%;
+    }
+    .type2 , .calendar2, .type3 {
+        margin: 20px 10px 0;
+    }
+    
+    * h2 , .calendar2 h2{
+        font-size: 20px;
+    }
+
+    .boxDu2 h3 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 5px;
+    }
+
+    .calendar2 input, .type2 select {
+        font-size: 18px;
+    }
+
+    .type2 input {
+        width: 80px;
+    }
 }
