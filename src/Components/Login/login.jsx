@@ -65,6 +65,9 @@ const Login = () => {
 						<button type="submit" className={styles.green_btn}>
 							Sign In
 						</button>
+						<button type="button" className={styles.sign1}>
+							Sign Up
+						</button>
 					</form>
 				</div>
 				<div className={styles.right}>
