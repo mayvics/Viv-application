@@ -13,7 +13,7 @@
 }
 .listCard{
     background-color: #F1F1F1;
-    width: 600px;
+    width: 100%;
     height: fit-content;
     border-radius: 25px;
     margin-bottom: 20px;
@@ -24,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .container-content{
@@ -97,4 +98,17 @@
     border-radius: 50%;
     background-color: antiquewhite;
     transition: 0.4s;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 650px) {
+    .card {
+        justify-content: center;
+    }
+
+    .container-content {
+        flex-direction: column;
+    }
+
 }
