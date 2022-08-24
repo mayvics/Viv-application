@@ -16,6 +16,8 @@ import { getToken } from "../../Login/services/auth";
 // import Lottie from "react-lottie";
 import * as loadingData from "./images/loading.json";
 
+>>>>>>> 4d115201b55840758354ab29e5160e24fd3470c6
+
 const ActivityListCard = () => {
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);

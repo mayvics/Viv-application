@@ -32,7 +32,7 @@ const Profile =() => {
         getDownloadURL(imageRef)
           .then((url) => {
             setUrl(url);
-            axios.post(`http://localhost:8080/users/profile`, {url}, {headers: {authorization: `Bearer ${getToken()}`}})
+            axios.post(`${import.meta.env.VITE_API_URL}/users/profile`, {url}, {headers: {authorization: `Bearer ${getToken()}`}})
           })
           .catch((error) => {
             console.log(error.message, "error getting the image url");
@@ -46,7 +46,7 @@ const Profile =() => {
 
 
   const fetchData = () => {
-    axios.get(`http://localhost:8080/users/login`, {headers: {authorization: `Bearer ${getToken()}`}})
+    axios.get(`${import.meta.env.VITE_API_URL}/users/login`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then ((res) => {
         setProfile(res.data)
     }).catch((err) => {
@@ -55,7 +55,7 @@ const Profile =() => {
   }
 
   const fetchImg = () => {
-    axios.get(`http://localhost:8080/users/profile`, {headers: {authorization: `Bearer ${getToken()}`}})
+    axios.get(`${import.meta.env.VITE_API_URL}/users/profile`, {headers: {authorization: `Bearer ${getToken()}`}})
     .then ((res) => {
       setDBUrl(res.data.url)
     }).catch((err) => {
@@ -65,12 +65,8 @@ const Profile =() => {
 
   useEffect(() => {
     fetchData()
-    fetchImg()
   }, [])
 
-  useEffect(() => {
-    fetchImg()
-  }, [dbUrl])
 
   return (
     <div className="con-profile">
