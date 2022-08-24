@@ -12,9 +12,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import ReactPaginate from "react-paginate";
 import { getToken } from "../../Login/services/auth";
-import FadeIn from "react-fade-in";
-import Lottie from "react-lottie";
-import * as loadingData from "./images/loading.json";
+
 
 const ActivityListCard = () => {
 
@@ -25,9 +23,6 @@ const ActivityListCard = () => {
 
 
     const [activity, setActivity] = useState([]);
-
-  //For Loading animate
-  const [loading, setLoading] = useState(false);
 
 
   //Fetch data from database to show at card
@@ -42,23 +37,9 @@ const ActivityListCard = () => {
     })
   }
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: loadingData.default,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
 
   useEffect(() => {
-
-    const timer = setTimeout(() => {
       fetchData()
-      setLoading(true)
-      }, 1000);
-
-    return () => clearTimeout(timer);
   }, [])
 
 
@@ -129,11 +110,6 @@ const ActivityListCard = () => {
     <div className="container">
         <div className="scroll">
         <div className="container-listcard">
-        <div style={{ display: "flex" }}>
-        {!loading ? (
-            <Lottie options={defaultOptions} isStopped={loading} height={140} width={140} /> ) : null }
-          </div>
-          <FadeIn>
             {currentItems.map((act,index) => (
                     <div className="listCard" key={index} >
                         <div className="card" key={index} >
@@ -153,7 +129,6 @@ const ActivityListCard = () => {
                         </div>
                     </div>
                     ))}
-          </FadeIn>
         </div> 
       <ReactPaginate
         breakLabel="..."
